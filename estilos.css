@@ -11,8 +11,22 @@ h1{
     padding: 5px 20px;
     border: 5px dashed rgb(109, 6, 109);
     border-radius: 60px;
+    position: relative;
+    top: 2vw;
     animation-duration: 3s;
     animation-name: deslizado_vertical;
+}
+
+span{
+  text-align: center;
+  font-size: 2vw;
+  margin: 1vw 0.75vw 1vw;
+  padding: 1vw 7vw 1vw;
+  border-radius: 30px;
+  background-color: rgb(109, 6, 109);
+  border: 5px solid black;
+  position: relative;
+  top: 3vw;
 }
 
 h2{
@@ -32,6 +46,8 @@ p{
     padding: 5px 20px;
     animation-duration: 3s;
     animation-name: deslizado_vertical;
+    position: relative;
+    top: 20vw;
 }
 /* p{
     text-align: left;
