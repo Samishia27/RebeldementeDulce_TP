@@ -12,7 +12,7 @@ h1{
     border: 5px dashed rgb(109, 6, 109);
     border-radius: 60px;
     position: relative;
-    top: 2vw;
+    top: 1vw;
     animation-duration: 3s;
     animation-name: deslizado_vertical;
 }
@@ -21,7 +21,7 @@ span{
   text-align: center;
   font-size: 2vw;
   margin: 1vw 0.75vw 1vw;
-  padding: 1vw 7vw 1vw;
+  padding: 1vw 6.5vw 1vw;
   border-radius: 30px;
   background-color: rgb(109, 6, 109);
   border: 5px solid black;
@@ -47,8 +47,19 @@ p{
     animation-duration: 3s;
     animation-name: deslizado_vertical;
     position: relative;
-    top: 20vw;
+    top: 50vw;
 }
+
+i{
+  color: rgb(109, 6, 109);
+  font-size: 5vw;
+  padding: 1vw 2vw 1vw;
+  position: relative;
+  top: 50vw;
+  left: 90vh;
+}
+
+
 /* p{
     text-align: left;
     font-size: 2vw;
