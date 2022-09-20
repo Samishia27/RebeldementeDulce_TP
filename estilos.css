@@ -4,6 +4,12 @@
     background-color: rgb(173, 141, 233);
 }
 
+header{
+  margin: 1px;
+  padding: 1px;
+  margin: auto;
+}
+
 h1{
     text-align: center;
     font-size: 5vw;
