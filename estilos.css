@@ -20,11 +20,11 @@ h1{
 span{
   text-align: center;
   font-size: 2vw;
-  margin: 1vw 0.75vw 1vw;
-  padding: 1vw 6.5vw 1vw;
+  margin: 1vh 1vw;
+  padding: 1vh 6.75vw;
   border-radius: 30px;
   background-color: rgb(109, 6, 109);
-  border: 5px solid black;
+  /* border: 5px solid black; */
   position: relative;
   top: 3vw;
 }
