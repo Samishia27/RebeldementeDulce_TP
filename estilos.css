@@ -4,13 +4,18 @@
     background-color: black;
 }
 
+body{
+  animation-duration: 3s;
+  animation-name: deslizado_vertical;
+}
+
 header{
   margin: 1px;
   padding: 1px;
   margin: auto;
 }
 
-h1{
+/* h1{
     text-align: center;
     color: #aa00ff;
     text-shadow: white;
@@ -20,11 +25,9 @@ h1{
     border: 5px dashed #aa00ff;
     border-radius: 60px;
     position: relative;
-    top: 1vw;
-    animation-duration: 3s;
-    animation-name: deslizado_vertical;
-}
-
+    top: 1vw; 
+} */
+/* 
 h2{
     text-align: center;
     font-size: 3vw;
@@ -32,26 +35,34 @@ h2{
     padding: 5px 20px;
     animation-duration: 3s;
     animation-name: deslizado_vertical;
-}
+} */
 
 p{
     text-align: center;
-    text-shadow: 5px rgb(109, 6, 109);
+    color: rgb(109, 6, 109);
     font-size: 2vw;
     margin: 20px 20px;
     padding: 5px 20px;
-    animation-duration: 3s;
-    animation-name: deslizado_vertical;
-    position: relative;
-    top: 50vw;
+    position: fixed;
+    animation-duration: 5s;
+    animation-name: deslizado_vertical; 
+    top: 25vh;
 }
+/* p{
+  color: white;
+  text-align: left;
+  font-size: 2vw;
+  margin: 5px 30px;
+  padding: auto;
+  /* 
+}*/
 
 .boton{
   text-align: center;
   color: black;
   font-size: 2vw;
   margin: 1vh 1vw;
-  padding: 1vh 4.15vw;
+  padding: 1vh 5.5vw;
   border-radius: 30px;
   background-color: rgb(109, 6, 109);
   border: 2px solid white;
@@ -65,7 +76,7 @@ p{
   color: black;
   font-size: 3vw;
   margin: 1vh 1vw;
-  padding: 1vh 4.15vw;
+  padding: 1vh 5.5vw;
   border-radius: 30px;
   background-color: rgb(109, 6, 109);
   border: 2px solid white;
@@ -82,14 +93,6 @@ p{
   left: 90vh;
   text-decoration: none;
 }
-/* p{
-    text-align: left;
-    font-size: 2vw;
-    margin: 5px 30px;
-    padding: auto;
-    animation-duration: 10s;
-    animation-name: deslizado_horizontal;
-} */
 
 @keyframes deslizado_vertical {
     from {
