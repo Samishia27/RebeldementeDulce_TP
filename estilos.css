@@ -1,7 +1,7 @@
 *{
     margin: 0px;
     padding: 0px;
-    background-color: rgb(173, 141, 233);
+    background-color: black;
 }
 
 header{
@@ -12,27 +12,17 @@ header{
 
 h1{
     text-align: center;
+    color: #aa00ff;
+    text-shadow: white;
     font-size: 5vw;
     margin: 20px 20px;
     padding: 5px 20px;
-    border: 5px dashed rgb(109, 6, 109);
+    border: 5px dashed #aa00ff;
     border-radius: 60px;
     position: relative;
     top: 1vw;
     animation-duration: 3s;
     animation-name: deslizado_vertical;
-}
-
-span{
-  text-align: center;
-  font-size: 2vw;
-  margin: 1vh 1vw;
-  padding: 1vh 6.75vw;
-  border-radius: 30px;
-  background-color: rgb(109, 6, 109);
-  /* border: 5px solid black; */
-  position: relative;
-  top: 3vw;
 }
 
 h2{
@@ -56,16 +46,42 @@ p{
     top: 50vw;
 }
 
-a{
+.boton{
+  text-align: center;
+  color: black;
+  font-size: 2vw;
+  margin: 1vh 1vw;
+  padding: 1vh 4.15vw;
+  border-radius: 30px;
+  background-color: rgb(109, 6, 109);
+  border: 2px solid white;
+  position: relative;
+  top: 3vw;
+  text-decoration: none;
+}
+
+.boton-2{ 
+  text-align: center;
+  color: black;
+  font-size: 3vw;
+  margin: 1vh 1vw;
+  padding: 1vh 4.15vw;
+  border-radius: 30px;
+  background-color: rgb(109, 6, 109);
+  border: 2px solid white;
+  position: relative;
+  top: 3vw;
+  text-decoration: none;
+  }
+
+.enlace{
   color: rgb(109, 6, 109);
   font-size: 5vw;
   padding: 1vw 2vw 1vw;
-  position: relative;
   top: 50vw;
   left: 90vh;
+  text-decoration: none;
 }
-
-
 /* p{
     text-align: left;
     font-size: 2vw;
