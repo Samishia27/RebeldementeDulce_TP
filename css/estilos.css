@@ -1,125 +1,121 @@
 *{
     margin: 0px;
     padding: 0px;
-    background-color: black;
+    box-sizing: border-box;
 }
 
 body{
-  animation-duration: 3s;
-  animation-name: deslizado_vertical;
+  background-color: rgb(77, 77, 77);
 }
 
-header{
-  margin: 1px;
-  padding: 1px;
-  margin: auto;
+/*
+==========================================================
+ESTILOS DEL NAV
+==========================================================
+*/
+
+#logo{
+  width: 80px;
 }
 
-/* h1{
-    text-align: center;
-    color: #aa00ff;
-    text-shadow: white;
-    font-size: 5vw;
-    margin: 20px 20px;
-    padding: 5px 20px;
-    border: 5px dashed #aa00ff;
-    border-radius: 60px;
-    position: relative;
-    top: 1vw; 
-} */
-/* 
-h2{
-    text-align: center;
-    font-size: 3vw;
-    margin: 5px 20px;
-    padding: 5px 20px;
-    animation-duration: 3s;
-    animation-name: deslizado_vertical;
-} */
-
-p{
-    text-align: center;
-    color: rgb(109, 6, 109);
-    font-size: 2vw;
-    margin: 20px 20px;
-    padding: 5px 20px;
-    position: fixed;
-    animation-duration: 5s;
-    animation-name: deslizado_vertical; 
-    top: 25vh;
+.nav{
+  background-color: rgb(109, 6, 109);
+  height: 80px;
+  align-items: center;
+  padding: 0px 80px;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-evenly;
+  overflow: hidden;
+  flex-wrap: wrap;
 }
-/* p{
-  color: white;
-  text-align: left;
-  font-size: 2vw;
-  margin: 5px 30px;
-  padding: auto;
-  /* 
-}*/
+
+.nav__img{
+  /* border: 3px solid blue; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.nav__nombre{
+  padding-left: 20px;
+}
+
+.nav__links{
+  /* border: 3px solid blue; */
+  margin-left: 2em;
+  display: inline-block;
+}
 
 .boton{
   text-align: center;
-  color: black;
-  font-size: 2vw;
-  margin: 1vh 1vw;
-  padding: 1vh 5.5vw;
-  border-radius: 30px;
-  background-color: rgb(109, 6, 109);
-  border: 2px solid white;
-  position: relative;
-  top: 3vw;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
   text-decoration: none;
+  margin-left: 25px;
 }
 
-.boton-2{ 
-  text-align: center;
-  color: black;
-  font-size: 3vw;
-  margin: 1vh 1vw;
-  padding: 1vh 5.5vw;
-  border-radius: 30px;
-  background-color: rgb(109, 6, 109);
-  border: 2px solid white;
-  position: relative;
-  top: 3vw;
-  text-decoration: none;
-  }
+/*
+==========================================================
+ESTILOS DEL CARROUSEL
+==========================================================
+*/
 
-.enlace{
-  color: rgb(109, 6, 109);
-  font-size: 5vw;
-  padding: 1vw 2vw 1vw;
-  top: 50vw;
-  left: 90vh;
+a{
   text-decoration: none;
+  font-size: 2em;
 }
 
-@keyframes deslizado_vertical {
-    from {
-      margin-top: 100%;
-      height: 100%
-    }
-  
-    to {
-      margin-top: 0%;
-      height: 100%;
-    }
+#contentItemsCarrusel{
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  margin: 0px;
+}
 
-    75% {
-        font-size: 300%;
-        margin-top: 25%;
-        height: 150%;
-      }
-  }
+.itemCarrusel{
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
 
-  @keyframes deslizado_horizontal {
-    from {
-      margin-left: 100%;
-      width: 300%
-    }
-  
-    to {
-      margin-left: 0%;
-      width: 100%;
-    }
-  }
+.tarjetaCarrusel{
+  height: 100%;
+  width: 100%;
+}
+
+.flechasCarrusel{
+  background-color: rgba(255, 228, 196, 0.5);
+  height: 100%;
+  top: 0px;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+#tarjetaCarrusel-1{
+  background-color: blueviolet;
+}
+#tarjetaCarrusel-2{
+  background-color: blue;
+}
+#tarjetaCarrusel-3{
+  background-color: red;
+}
+
+/* #selector_manual{
+  border: 5px solid black;
+  display: flex;
+  justify-content:center;
+}
+
+.punto{
+  font-size: 10em;
+  color: black;
+  padding-right: 3vh;
+} */

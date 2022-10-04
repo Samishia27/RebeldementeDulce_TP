@@ -7,17 +7,75 @@
     <link rel="stylesheet" href="css/estilos.css">
     <title>Productos-Rebeldemente Dulce</title>
     <link rel="Icon" href="img/Rebeldemente-Dulce-Favicon.ico">
+    <script src="https://kit.fontawesome.com/588e4a898f.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/89ca3f5f54.js" crossorigin="anonymous"></script>
 </head>
-    <!-- <header>
-        <h1>Productos</h1>
-    </header> -->
+
 <body>
-    <nav>
-        <a href="index.html" class="boton">Inicio</a>
-        <a href="sobre_nosotros.html" class="boton">Sobre Nosotros</a>
-        <a href="productos.html" class="boton-2">Productos</a>
-        <a href="contactanos.html" class="boton">Contactanos</a>
+
+    <nav class="nav">
+
+        <div class="nav__img">
+            <img src="img/Rebeldemente-Dulce-Favicon.ico" alt="Logo" id="logo">
+            <h1 class="nav__nombre"> Rebeldemente Dulce </h1>
+        </div>
+
+        <div class="nav__links">
+            <a href="index.html" class="boton">Inicio</a>
+            <a href="sobre_nosotros.html" class="boton">Sobre Nosotros</a>
+            <a href="productos.html" class="boton">Productos</a>
+            <a href="contactanos.html" class="boton">Contactanos</a>
+        </div>
     </nav>
+
+
+    <div id="contentItemsCarrusel">
+        <div class="itemCarrusel" id="itemCarrusel-1">
+            <div class="tarjetaCarrusel" id="tarjetaCarrusel-1">
+                A
+            </div>
+            <div class="flechasCarrusel">
+                <a href="#itemCarrusel-3">
+                    <i class="fa-solid fa-angles-left"></i>
+                </a>
+                <a href="#itemCarrusel-2">
+                    <i class="fa-solid fa-angles-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="itemCarrusel" id="itemCarrusel-2">
+            <div class="tarjetaCarrusel" id="tarjetaCarrusel-2">
+                B
+            </div>
+            <div class="flechasCarrusel">
+                <a href="#itemCarrusel-1">
+                    <i class="fa-solid fa-angles-left"></i>
+                </a>
+                <a href="#itemCarrusel-3">
+                    <i class="fa-solid fa-angles-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="itemCarrusel" id="itemCarrusel-3">
+            <div class="tarjetaCarrusel" id="tarjetaCarrusel-3">
+                C
+            </div>
+            <div class="flechasCarrusel">
+                <a href="#itemCarrusel-2">
+                    <i class="fa-solid fa-angles-left"></i>
+                </a>
+                <a href="#itemCarrusel-1">
+                    <i class="fa-solid fa-angles-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="selector_manual">
+        <a href="#itemCarrusel-1" class="punto">·</a>
+        <a href="#itemCarrusel-2" class="punto">·</a>
+        <a href="#itemCarrusel-3" class="punto">·</a>
+    </div>
 </body>
+
 </html>
