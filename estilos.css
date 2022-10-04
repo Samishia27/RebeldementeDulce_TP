@@ -1,7 +1,8 @@
 *{
-    margin: 0px;
-    padding: 0px;
-    background-color: black;
+  margin: 0px;
+  padding: 0px;
+  background-color: #d079fc;
+  font-family: Dulcelin;
 }
 
 body{
@@ -27,35 +28,41 @@ header{
     position: relative;
     top: 1vw; 
 } */
-/* 
+
 h2{
+    color: white;
     text-align: center;
     font-size: 3vw;
     margin: 5px 20px;
     padding: 5px 20px;
-    animation-duration: 3s;
-    animation-name: deslizado_vertical;
-} */
+}
 
 p{
-    text-align: center;
-    color: rgb(109, 6, 109);
-    font-size: 2vw;
-    margin: 20px 20px;
-    padding: 5px 20px;
-    position: fixed;
-    animation-duration: 5s;
-    animation-name: deslizado_vertical; 
-    top: 25vh;
+  text-align:justify;
+  text-shadow: 1px 1px 1px white;
+  color:#dea6fa;
+  font-size: 220%;
+  margin: 20px 20px;
+  padding: 5px 20px;
+  position: fixed;
+  animation-duration: 3s;
+  animation-name: deslizado_horizontal;
+  animation-name: deslizado_vertical;
+  top: 25vh;
 }
-/* p{
+
+p.primeralinea{
+  text-indent: 3%;
+}
+
+a{
+  font-weight: bold;
+}
+
+a:hover{
   color: white;
-  text-align: left;
-  font-size: 2vw;
-  margin: 5px 30px;
-  padding: auto;
-  /* 
-}*/
+  font-weight: bolder;
+}
 
 .boton{
   text-align: center;
@@ -73,6 +80,7 @@ p{
 
 .boton-2{ 
   text-align: center;
+  text-shadow: 3px 3px 3px #dea6fa;
   color: black;
   font-size: 3vw;
   margin: 1vh 1vw;
@@ -94,6 +102,11 @@ p{
   text-decoration: none;
 }
 
+@font-face {
+  font-family:Dulcelin;
+  src: url(Dulcelin.otf);
+}
+
 @keyframes deslizado_vertical {
     from {
       margin-top: 100%;
@@ -106,7 +119,7 @@ p{
     }
 
     75% {
-        font-size: 300%;
+        font-size: 200%;
         margin-top: 25%;
         height: 150%;
       }
