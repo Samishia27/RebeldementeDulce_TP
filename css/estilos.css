@@ -1,13 +1,13 @@
 *{
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
   background-color: #d079fc;
   font-family: Dulcelin;
 }
 
 body{
-  animation-duration: 3s;
-  animation-name: deslizado_vertical;
+  
 }
 
 header{
@@ -15,6 +15,7 @@ header{
   padding: 1px;
   margin: auto;
 }
+
 
 /* h1{
     text-align: center;
@@ -44,17 +45,30 @@ p{
   font-size: 220%;
   margin: 20px 20px;
   padding: 5px 20px;
-  position: fixed;
-  animation-duration: 3s;
-  animation-name: deslizado_horizontal;
-  animation-name: deslizado_vertical;
-  top: 25vh;
 }
 
 p.primeralinea{
   text-indent: 3%;
 }
 
+/*
+ESTILOS NAV
+*/
+
+nav{
+  width: 97%;
+  height: 130px;
+  background-color: pink;
+  margin: 5px auto;
+  padding: 25px;
+  border: 5px dashed violet;
+  border-radius: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: flex-start;
+  align-items: center;
+}
 a{
   font-weight: bold;
 }
@@ -62,36 +76,45 @@ a{
 a:hover{
   color: white;
   font-weight: bolder;
+  text-shadow: 3px 3px 3px grey;
+}
+
+.index{
+  animation-duration: 3s;
+  animation-name: deslizado_vertical;
 }
 
 .boton{
+  width: 25%;
   text-align: center;
   color: black;
+  text-shadow: 3px 3px 3px #dea6fa;
   font-size: 2vw;
-  margin: 1vh 1vw;
-  padding: 1vh 5.5vw;
+  margin: 15px;
+  padding: 15px;
   border-radius: 30px;
   background-color: rgb(109, 6, 109);
   border: 2px solid white;
-  position: relative;
-  top: 3vw;
   text-decoration: none;
+  flex-grow: 1;
 }
 
-.boton-2{ 
-  text-align: center;
-  text-shadow: 3px 3px 3px #dea6fa;
-  color: black;
+.grande{ 
   font-size: 3vw;
-  margin: 1vh 1vw;
-  padding: 1vh 5.5vw;
-  border-radius: 30px;
-  background-color: rgb(109, 6, 109);
-  border: 2px solid white;
-  position: relative;
-  top: 3vw;
-  text-decoration: none;
   }
+  
+/*
+DISEÑO LOGO INDEX
+*/
+
+.Logo{
+  width: 80%;
+  height: 500px;
+  margin: 50px auto;
+  border: 2px purple;
+  display: flex;
+  flex-direction: row;
+}
 
 .enlace{
   color: rgb(109, 6, 109);
@@ -102,10 +125,9 @@ a:hover{
   text-decoration: none;
 }
 
-@font-face {
-  font-family:Dulcelin;
-  src: url(Dulcelin.otf);
-}
+/*
+ANIMACIONES
+*/
 
 @keyframes deslizado_vertical {
     from {
@@ -136,3 +158,12 @@ a:hover{
       width: 100%;
     }
   }
+
+/*
+FUENTES
+*/
+  @font-face {
+    font-family:Dulcelin;
+    src: url(Dulcelin.otf);
+  }
+  
