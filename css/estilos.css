@@ -56,21 +56,18 @@ ESTILOS NAV
 */
 
 nav{
-  width: 97%;
+  width: 100%;
   height: 130px;
-  background-color: pink;
+  /* background-color: pink; */
   margin: 5px auto;
   padding: 25px;
-  border: 5px dashed violet;
+  /* border: 5px dashed violet; */
   border-radius: 60px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-content: flex-start;
   align-items: center;
-}
-a{
-  font-weight: bold;
 }
 
 a:hover{
@@ -90,6 +87,7 @@ a:hover{
   color: black;
   text-shadow: 3px 3px 3px #dea6fa;
   font-size: 2vw;
+  font-weight: bold;
   margin: 15px;
   padding: 15px;
   border-radius: 30px;
@@ -99,21 +97,35 @@ a:hover{
   flex-grow: 1;
 }
 
-.grande{ 
+.pagina-actual{ 
   font-size: 3vw;
   }
   
 /*
-DISEÑO LOGO INDEX
+DISEÑO LOGO INDEX 
+REVISAR- REVISAR- REVISAR- REVISAR- REVISAR- REVISAR- REVISAR- REVISAR- REVISAR- REVISAR
 */
 
 .Logo{
-  width: 80%;
-  height: 500px;
+  background-color: black;
+  width: 350px;
+  height: 350px;
   margin: 50px auto;
-  border: 2px purple;
+  padding: 5px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-content: flex-start;
+  align-items: center;
+}
+
+.inicio{
+  margin: auto;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+ 
 }
 
 .enlace{
@@ -164,6 +176,6 @@ FUENTES
 */
   @font-face {
     font-family:Dulcelin;
-    src: url(Dulcelin.otf);
+    src: url(fuentes/Dulcelin.otf);
   }
   
