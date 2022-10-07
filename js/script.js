@@ -1,7 +1,7 @@
 
 let header  =`
     <nav class="index">
-        <a href="index.html" class="boton pagina-actual">Inicio</a>
+        <a href="index.html" class="boton">Inicio</a>
         <a href="sobre_nosotros.html" class="boton">Nosotros</a>
         <a href="productos.html" class="boton">Productos</a>
         <a href="contactanos.html" class="boton">Contactanos</a>
