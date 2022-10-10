@@ -2,12 +2,13 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  background-color: #d079fc;
-  font-family: Dulcelin;
 }
 
-body{
-  
+html{
+  font-size: 1rem;
+  height: 100%;
+  background-color: #d079fc;
+  font-family: Dulcelin;
 }
 
 header{
@@ -15,20 +16,6 @@ header{
   padding: 1px;
   margin: auto;
 }
-
-
-/* h1{
-    text-align: center;
-    color: #aa00ff;
-    text-shadow: white;
-    font-size: 5vw;
-    margin: 20px 20px;
-    padding: 5px 20px;
-    border: 5px dashed #aa00ff;
-    border-radius: 60px;
-    position: relative;
-    top: 1vw; 
-} */
 
 h2{
     color: white;
@@ -60,7 +47,7 @@ ESTILOS NAV
 
 nav{
   width: 100%;
-  height: 100px;
+  min-height: 100px;
   /* background-color: pink; */
   margin: 5px auto;
   padding: 25px;
@@ -151,11 +138,6 @@ div p{
 font-size: 5px;
 
 }
-
-
-
-
-
 
 .enlace{
   color: rgb(109, 6, 109);

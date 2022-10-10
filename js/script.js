@@ -1,6 +1,6 @@
 
 let header  =`
-    <nav class="index">
+    <nav>
         <a href="index.html" class="boton">Inicio</a>
         <a href="sobre_nosotros.html" class="boton">Nosotros</a>
         <a href="productos.html" class="boton">Productos</a>
