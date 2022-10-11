@@ -5,22 +5,24 @@
 }
 
 html{
-  font-size: 1rem;
   height: 100%;
   background-color: #d079fc;
   font-family: Dulcelin;
 }
-
+/* :root{
+  font-size: 16px;
+} */
+/* 
 header{
   margin: 1px;
   padding: 1px;
   margin: auto;
-}
+} */
 
 h2{
     color: white;
     text-align: center;
-    font-size: 2vw;
+    font-size: 2rem;
     margin: 5px 20px;
     padding: 5px 20px;
 }
@@ -28,34 +30,34 @@ h2{
 p{
   text-align:justify;
   text-shadow: 1px 1px 1px white;
-  color:#dea6fa;
-  font-size: 220%;
-  /* margin: 20px 20px;
-  padding: 5px 20px; */
+  color:#530d77;
+  font-size: 2rem;
+  margin: 0.02rem;
+  padding: 0.05rem;
 }
 
 p.primeralinea{
   text-indent: 3%;
-  font-size: 40px;
-  margin: auto;
-  padding: 5px 20px;
 }
 
+.pie-pagina{
+  text-align:center;
+  text-shadow: 1px 1px 1px white;
+  color:#530d77;
+  font-size: 2rem;
+}
 /*
 ESTILOS NAV
 */
 
 nav{
   width: 100%;
-  min-height: 100px;
-  /* background-color: pink; */
-  margin: 5px auto;
-  padding: 25px;
-  /* border: 5px dashed violet; */
-  border-radius: 60px;
+  height: auto;
+  margin: 5px;
+  padding: 5px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-content: flex-start;
   align-items: center;
 }
@@ -72,35 +74,44 @@ a:hover{
 }
 
 .boton{
-  width: 25%;
+  /* image.png */
   text-align: center;
   color: black;
   text-shadow: 3px 3px 3px #dea6fa;
-  font-size: 2vw;
+  font-size: 2rem;
   font-weight: bold;
-  margin: 15px;
-  padding: 15px;
+  margin: 0.5rem;
+  padding: 0.5rem;
   border-radius: 30px;
-  background-color: rgb(109, 6, 109);
+  background-color: #530d77;
   border: 2px solid white;
   text-decoration: none;
+  overflow-y: auto;
   flex-grow: 1;
 }
-
-/* .pagina-actual{ 
-  font-size: 3vw;
-  } */
   
+
 /*
 DISEÑO LOGO INDEX 
 REVISAR- REVISAR- REVISAR- REVISAR- REVISAR- REVISAR- REVISAR- REVISAR- REVISAR- REVISAR
 */
+main>div{
+  background-image: url("/img/Fondo-Escarcha.jpg");
+  background-size: cover;
+  border: 2px black solid;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: center;
+}
 
 .Logo{
   background-color: black;
-  width: 350px;
-  height: 350px;
-  margin: 50px auto;
+  width: 40rem;
+  height: 40rem;
+  margin: 5px;
   padding: 5px;
   display: flex;
   flex-direction: row;
@@ -120,27 +131,27 @@ REVISAR- REVISAR- REVISAR- REVISAR- REVISAR- REVISAR- REVISAR- REVISAR- REVISAR-
 
 footer{
   width: 100%;
-  height: 100px;
-  /* background-color: pink; */
-  margin: 5px auto;
-  padding: 25px;
-  /* border: 5px dashed violet; */
-  border-radius: 60px;
+  height: auto;
+  margin: 2px;
+  padding: 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+footer>div{
+  margin: 0.02rem;
+  padding: 0.02rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-content: flex-start;
   align-items: center;
 }
-
-div p{
-
-font-size: 5px;
-
+footer>div>p{
+font-size: 1rem;
 }
 
 .enlace{
-  color: rgb(109, 6, 109);
+  color: #530d77;
   font-size: 5vw;
   padding: 1vw 2vw 1vw;
   top: 50vw;
@@ -170,7 +181,7 @@ ANIMACIONES
       }
   }
 
-  @keyframes deslizado_horizontal {
+@keyframes deslizado_horizontal {
     from {
       margin-left: 100%;
       width: 300%
@@ -185,8 +196,32 @@ ANIMACIONES
 /*
 FUENTES
 */
-  @font-face {
-    font-family:Dulcelin;
-    src: url(fuentes/Dulcelin.otf);
-  }
+@font-face {
+  font-family:Dulcelin;
+  src: url(fuentes/Dulcelin.otf);
+}
   
+@media only screen and (max-width: 600px) {
+    html{
+      font-size: 6px;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    html{
+      font-size: 6px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  html{
+    font-size: 16px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}

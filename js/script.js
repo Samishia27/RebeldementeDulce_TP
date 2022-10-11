@@ -10,16 +10,18 @@ let header  =`
 document.getElementById("idheader").innerHTML=header
 
 let footer = `
-    <div>
-        <h2>Seguinos en nuestras Redes Sociales</h2>
-    </div>
-    <div>
-        <a href="https://www.facebook.com/" target="_blank" class="enlace">
-            <i class="fa-brands fa-square-facebook"></i>
-        </a>
-        <a href="https://www.instagram.com/rebeldementedulce/" target="_blank" class="enlace">
-            <i class="fa-brands fa-instagram"></i>
-    </a>
+    <div class:redes-sociales>
+        <div>
+            <p class="pie-pagina">Seguinos en nuestras Redes Sociales</p>
+        </div>
+        <div>
+            <a href="https://www.facebook.com/" target="_blank" class="enlace">
+                <i class="fa-brands fa-square-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/rebeldementedulce/" target="_blank" class="enlace">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
     </div>
     <div>
         <p>Derechos Reservados @2022</p>
