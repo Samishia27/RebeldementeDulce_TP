@@ -9,7 +9,7 @@ let header  =`
 `
 document.getElementById("idheader").innerHTML=header
 
-let footer = `
+let footer =`
     <div class:redes-sociales>
         <div>
             <p class="pie-pagina">Seguinos en nuestras Redes Sociales</p>
