@@ -92,8 +92,7 @@ a:hover{
   
 
 /*
-DISEÑO LOGO INDEX 
-REVISAR- REVISAR- REVISAR- REVISAR- REVISAR- REVISAR- REVISAR- REVISAR- REVISAR- REVISAR
+DISEÑO LOGO INDEX
 */
 main>div{
   background-image: url("/img/Fondo-Escarcha.jpg");
@@ -201,27 +200,27 @@ FUENTES
   src: url(fuentes/Dulcelin.otf);
 }
   
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 425px) {
     html{
-      font-size: 6px;
+      font-size: 8px;
     }
-}
-
-@media only screen and (min-width: 600px){
-    html{
-      font-size: 6px;
+    footer{
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
     }
-}
+  }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
+  html{
+    font-size: 12px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
   html{
     font-size: 16px;
   }
 }
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {...}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {...}
