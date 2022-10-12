@@ -1,55 +1,4 @@
 *{
-<<<<<<< HEAD
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-
-body{
-  background-color: rgb(41, 36, 36);
-}
-
-/*
-==========================================================
-ESTILOS DEL NAV
-==========================================================
-*/
-
-#logo{
-  width: 80px;
-}
-
-.nav{
-  background-color: rgb(109, 6, 109);
-  height: 80px;
-  align-items: center;
-  padding: 0px 80px;
-  color: rgb(255, 255, 255);
-  display: flex;
-  justify-content: space-evenly;
-  overflow: hidden;
-  flex-wrap: wrap;
-}
-
-.nav__img{
-  /* border: 3px solid blue; */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  height: 100%;
-}
-
-.nav__nombre{
-  padding-left: 20px;
-}
-
-.nav__links{
-  /* border: 3px solid blue; */
-  margin-left: 2em;
-  display: inline-block;
-}
-=======
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -123,57 +72,10 @@ a:hover{
   animation-duration: 3s;
   animation-name: deslizado_vertical;
 }
->>>>>>> 25c609652ad1bc1054ce255ee9f1dd2fb1c9ad13
 
 .boton{
   /* image.png */
   text-align: center;
-<<<<<<< HEAD
-  color: rgb(255, 255, 255);
-  font-size: 20px;
-  text-decoration: none;
-  margin-left: 25px;
-}
-
-/*
-==========================================================
-ESTILOS DEL CARROUSEL
-==========================================================
-*/
-
-.slide_container{
-  border: 1px solid blue;
-  display: flex;
-  justify-content:center;
-  align-items: center;
-  height: 600px;
-}
-
-.slide_img{
-  /* border: 1px solid rgb(0, 255, 255); */
-  height: 450px;
-  margin-right: 20px;
-
-}
-
-.slide_description{
-  /* border: 1px solid rgb(255, 3, 108); */
-  height: 450px;
-  width: 600px;
-}
-
-.slide_description-name, .slide_description-price, .slide_description-delivery, .slide_description-text{
-  color: wheat;
-  padding: 10px;
-}
-
-.slide_description-name{
-  font-size: 60px;
-}
-
-.slide_description-price{
-  font-size: 50px;
-=======
   color: black;
   text-shadow: 3px 3px 3px #dea6fa;
   font-size: 2rem;
@@ -471,5 +373,4 @@ Extra large devices (large laptops and desktops, 1200px and up)
 .card:hover .back{
   transform: perspective(600px) rotatey(360deg);
   cursor: pointer;
->>>>>>> 25c609652ad1bc1054ce255ee9f1dd2fb1c9ad13
 }
