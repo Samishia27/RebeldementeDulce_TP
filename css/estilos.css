@@ -94,7 +94,7 @@ a:hover{
 /*
 DISEÑO LOGO INDEX
 */
-main>div{
+.logo{
   background-image: url("/img/Fondo-Escarcha.jpg");
   background-size: cover;
   border: 2px black solid;
@@ -102,19 +102,6 @@ main>div{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-content: flex-start;
-  align-items: center;
-}
-
-.Logo{
-  background-color: black;
-  width: 40rem;
-  height: 40rem;
-  margin: 5px;
-  padding: 5px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-content: flex-start;
   align-items: center;
 }
@@ -211,6 +198,17 @@ FUENTES
     }
   }
 
+  @media only screen and (min-width: 425px) {
+    html{
+      font-size: 10px;
+    }
+    footer{
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+    }
+  }
+
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 992px) {
   html{
@@ -224,12 +222,6 @@ FUENTES
     font-size: 16px;
   }
 }
-
-/* Large devices (laptops/desktops, 992px and up)
-@media only screen and (min-width: 992px) {...}
-
-Extra large devices (large laptops and desktops, 1200px and up)
-@media only screen and (min-width: 1200px) {...} */
 
 /* 
 -----------------------------------------------------------------------------------
