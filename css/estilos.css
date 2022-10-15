@@ -6,18 +6,9 @@
 
 html{
   height: 100%;
-  background-color: #d079fc;
+  background-color: black;
   font-family: Dulcelin;
 }
-/* :root{
-  font-size: 16px;
-} */
-/* 
-header{
-  margin: 1px;
-  padding: 1px;
-  margin: auto;
-} */
 
 h2{
     color: white;
@@ -42,7 +33,7 @@ p.primeralinea{
 
 .pie-pagina{
   text-align:center;
-  text-shadow: 1px 1px 1px white;
+  text-shadow: 0.2rem 0.2rem 0.2rem #d079fc;
   color:#530d77;
   font-size: 2rem;
 }
@@ -77,14 +68,14 @@ a:hover{
   /* image.png */
   text-align: center;
   color: black;
-  text-shadow: 3px 3px 3px #dea6fa;
+  text-shadow: 0.1rem 0.1rem 0.1rem #dea6fa;
   font-size: 2rem;
   font-weight: bold;
   margin: 0.5rem;
   padding: 0.5rem;
   border-radius: 30px;
   background-color: #530d77;
-  border: 2px solid white;
+  border: 2px solid #d079fc;
   text-decoration: none;
   overflow-y: auto;
   flex-grow: 1;
@@ -108,21 +99,19 @@ DISEÑO LOGO INDEX
 
 .inicio{
   margin: auto;
-  background-color: black;
   width: 100%;
   height: 100%;
   flex-grow: 1;
- 
 }
 
 footer{
   width: 100%;
   height: auto;
-  margin: 2px;
-  padding: 2px;
+  margin: 0.01rem;
+  padding: 0.01rem;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column-reverse;
+  justify-content:baseline;
   align-items: flex-end;
 }
 footer>div{
@@ -138,10 +127,8 @@ font-size: 1rem;
 
 .enlace{
   color: #530d77;
-  font-size: 5vw;
-  padding: 1vw 2vw 1vw;
-  top: 50vw;
-  left: 90vh;
+  font-size: 3rem;
+  padding: 0.5rem 1.5rem 0.5rem;
   text-decoration: none;
 }
 
@@ -186,7 +173,12 @@ FUENTES
   font-family:Dulcelin;
   src: url(fuentes/Dulcelin.otf);
 }
-  
+
+@font-face {
+  font-family:Audiowide;
+  src: url(fuentes/Audiowide-Regular.t);
+}
+
 @media only screen and (max-width: 425px) {
     html{
       font-size: 8px;
@@ -209,14 +201,12 @@ FUENTES
     }
   }
 
-/* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 992px) {
   html{
     font-size: 12px;
   }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   html{
     font-size: 16px;
@@ -233,9 +223,11 @@ FUENTES
 
 .tittle{
   width: 100%;
+  color: #530d77;
+  background-color: black;
   text-align: center;
   font-weight: bold;
-  height: 50px;
+  height: 3rem;
   text-align: center;
   margin-top: 25px;
   margin-bottom: 25px;
@@ -244,24 +236,23 @@ FUENTES
 .tittle h1{
   display: inline-block;
   position: relative;
-  color: rgba(41, 18, 41, 0.74)
 }
 
 .tittle h1::before, .tittle h1::after{
   content: '';
   position: absolute;
-  width:300px;
+  width:100%;
   height: 3px;
   background-color: currentColor;
   top: 0.6em;
 }
 
 .tittle h1::before{
-  left: -320px;
+  left: -20rem;
 }
 
 .tittle h1::after{
-  right: -320px;
+  right: -20rem;
 }
 
 /* Contenedor de todas las cajas */
@@ -269,18 +260,18 @@ FUENTES
 .container{
   /* border: 2px dashed black; */
   width: 100%;
-  margin: 0 auto;
+  padding: 2rem;
   display: flex;
   flex-wrap: wrap;
-  height: 1000px;
-  justify-content: space-around;
-
+  height: fit-content;
+  justify-content: flex-start;
 }
 
 .box{
   /* border: 2px solid black; */
-  height: 460px;
-  margin: 0px 60px 0px 60px;
+  height: 30rem;
+  margin: 0rem 4rem 0rem;
+  padding: 1.5rem;
 }
 
 .box h3{
@@ -292,23 +283,15 @@ FUENTES
 
 .box .link{
   text-decoration: none;
-  text-shadow: none;
-  color: black;
+  text-shadow: 0.2rem 0.2rem 0.2rem #d079fc;
+  color: #530d77;
 }
-
-.box .link:hover{
-  color: rgba(255, 255, 255, 0.699);
-  text-decoration:underline;
-}
-
-
 
 .box p{
   position: relative;
   font-size: 1.1em;
   width: 250px;
   text-shadow: none;
-  color: black;
   margin-top: 5px;
   text-align: center;
   user-select: none;

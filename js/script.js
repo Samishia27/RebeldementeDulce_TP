@@ -10,7 +10,7 @@ let header  =`
 document.getElementById("idheader").innerHTML=header
 
 let footer =`
-    <div class:redes-sociales>
+    <div>
         <div>
             <p class="pie-pagina">Seguinos en nuestras Redes Sociales</p>
         </div>
