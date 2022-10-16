@@ -10,18 +10,18 @@ html{
   font-family: Dulcelin;
 }
 
-h2{
+/* h2{
     color: white;
     text-align: center;
     font-size: 2rem;
     margin: 5px 20px;
     padding: 5px 20px;
-}
+} */
 
 p{
   text-align:justify;
-  text-shadow: 1px 1px 1px white;
-  color:#530d77;
+  text-shadow: 0.1rem 0.1rem 0.1 rgb(61, 60, 60);
+  color: white;
   font-size: 2rem;
   margin: 0.02rem;
   padding: 0.05rem;
@@ -33,9 +33,9 @@ p.primeralinea{
 
 .pie-pagina{
   text-align:center;
-  text-shadow: 0.2rem 0.2rem 0.2rem #d079fc;
-  color:#530d77;
-  font-size: 2rem;
+  text-shadow: 0.1rem 0.1rem 0.1rem rgb(61, 60, 60);
+  color: white;
+  font-size: 1.5rem;
 }
 /*
 ESTILOS NAV
@@ -54,9 +54,9 @@ nav{
 }
 
 a:hover{
-  color: white;
-  font-weight: bolder;
-  text-shadow: 3px 3px 3px grey;
+  color: #d079fc;
+  text-shadow: 0.1rem 0.1rem 0.1rem rgb(61, 60, 60);
+  font-weight: bold;
 }
 
 .index{
@@ -65,17 +65,17 @@ a:hover{
 }
 
 .boton{
-  /* image.png */
+  width: 25%;
   text-align: center;
-  color: black;
-  text-shadow: 0.1rem 0.1rem 0.1rem #dea6fa;
+  color: white;
+  text-shadow: 0.1rem 0.1rem 0.1rem grey;
   font-size: 2rem;
   font-weight: bold;
   margin: 0.5rem;
   padding: 0.5rem;
-  border-radius: 30px;
+  border-radius: 3rem;
   background-color: #530d77;
-  border: 2px solid #d079fc;
+  border: 0.15rem solid #d079fc;
   text-decoration: none;
   overflow-y: auto;
   flex-grow: 1;
@@ -105,21 +105,20 @@ DISEÑO LOGO INDEX
 }
 
 footer{
+  font-family: Audiowide;
+  color: white;
   width: 100%;
-  height: auto;
+  height: fit-content;
   margin: 0.01rem;
   padding: 0.01rem;
   display: flex;
   flex-direction: column-reverse;
-  justify-content:baseline;
-  align-items: flex-end;
+  justify-content: space-around;
 }
 footer>div{
   margin: 0.02rem;
   padding: 0.02rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
 }
 footer>div>p{
 font-size: 1rem;
@@ -127,7 +126,9 @@ font-size: 1rem;
 
 .enlace{
   color: #530d77;
+  text-shadow: 0.1rem 0.1rem 0.1rem #d079fc;
   font-size: 3rem;
+  margin: 0.02rem;
   padding: 0.5rem 1.5rem 0.5rem;
   text-decoration: none;
 }
@@ -171,12 +172,12 @@ FUENTES
 */
 @font-face {
   font-family:Dulcelin;
-  src: url(fuentes/Dulcelin.otf);
+  src: url(/fuentes/Dulcelin.otf);
 }
 
 @font-face {
   font-family:Audiowide;
-  src: url(fuentes/Audiowide-Regular.t);
+  src: url(/fuentes/Audiowide.ttf);
 }
 
 @media only screen and (max-width: 425px) {
@@ -222,15 +223,14 @@ FUENTES
 /* ESTILO DEL TITULO */
 
 .tittle{
-  width: 100%;
-  color: #530d77;
-  background-color: black;
+  /* width: 100%; */
+  color:white;
+  font-family: Audiowide;
   text-align: center;
   font-weight: bold;
   height: 3rem;
-  text-align: center;
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin: 1rem;
+  padding: 1rem;
 }
 
 .tittle h1{
@@ -241,67 +241,70 @@ FUENTES
 .tittle h1::before, .tittle h1::after{
   content: '';
   position: absolute;
-  width:100%;
-  height: 3px;
+  width: 100%;
+  height: 0.3rem;
   background-color: currentColor;
-  top: 0.6em;
+  top: 1.5rem;
 }
 
 .tittle h1::before{
-  left: -20rem;
+  left: -32rem;
 }
 
 .tittle h1::after{
-  right: -20rem;
+  right: -32rem;
 }
 
 /* Contenedor de todas las cajas */
 
 .container{
-  /* border: 2px dashed black; */
   width: 100%;
-  padding: 2rem;
+  padding: 1rem;
   display: flex;
   flex-wrap: wrap;
   height: fit-content;
-  justify-content: flex-start;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
 }
 
 .box{
-  /* border: 2px solid black; */
-  height: 30rem;
-  margin: 0rem 4rem 0rem;
-  padding: 1.5rem;
+  height: 40rem;
+  margin: 1rem 4rem;
+  padding: 1.2rem;
+  background-color: #d079fc;
+  border-radius: 2rem;
+  border: 0.2rem rgb(61, 60, 60) dashed;
 }
 
-.box h3{
+h3{
+  font-family: Audiowide;
   text-align: center;
-  margin-top: 15px;
+  margin-top: 1rem;
   font-size: 1.5em;
   user-select: none;
 }
 
 .box .link{
   text-decoration: none;
-  text-shadow: 0.2rem 0.2rem 0.2rem #d079fc;
+  text-shadow: 0.1rem 0.2rem 0.1rem #d079fc;
   color: #530d77;
 }
 
 .box p{
   position: relative;
-  font-size: 1.1em;
-  width: 250px;
-  text-shadow: none;
-  margin-top: 5px;
+  font-size: 1.5rem;
+  width: 15.265rem;
+  margin: 0.3rem;
   text-align: center;
   user-select: none;
-  padding: 5px;
+  padding: 0.5rem;
 }
 
 .card{
   position: relative;
-  width: 250px;
-  height: 250px;
+  width: 15.625rem;
+  height: 15.625rem;
   display: flex;
 }
 
