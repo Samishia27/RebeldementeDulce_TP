@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilos.css">
+    <!-- <link rel="stylesheet" href="css/estilos.css"> -->
     <link rel="stylesheet" href="css/estilos_MV.css">
     <title>Contactanos-Rebeldemente Dulce</title>
     <link rel="Icon" href="img/Rebeldemente-Dulce-Favicon.ico">
@@ -26,11 +26,11 @@
                 server called "action_page.php". -->
             <!-- https://www.w3schools.com/tags/tag_form.asp -->
             <form action="" id="formulario">
-                <fieldset>
+                <!-- <fieldset> -->
                     <!-- <legend>Personalia:</legend> -->
                     <div class="formulario__grupo" id="grupo__nombre">
                         <label for="nombre" class="formulario__label">Nombre:</label>
-                        <input type="text" class="formulario__input" id="nombre" name="nombre" placeholder="Inodoro Pereyra"><br><br>
+                        <input type="text" class="formulario__input formulario__input_neutro" id="nombre" name="nombre" placeholder="Inodoro Pereyra"><br><br>
                         <!-- <i class="formulario__validacion-estado fas fa-times-circle"></i> -->
                         <!-- <div class="formulario__grupo-input">
                         </div> -->
@@ -82,7 +82,7 @@
                         </div>
                         <div class="formulario__grupo" id="grupo__mensajeRegalo">
                             <label for="mensajeRegalo" class="formulario__label">Mensaje:</label>
-                            <input type="text" class="formulario__input" id="mensajeRegalo" name="mensajeRegalo" value="Podés dejarle un mensaje"><br><br>
+                            <input type="text" class="formulario__input" id="mensajeRegalo" name="mensajeRegalo" placeholder="Podés dejarle un mensaje"><br><br>
                             <!-- <div class="formulario__grupo-input">
                             </div> -->
                         </div>
@@ -91,7 +91,7 @@
                     <div class="formulario__opciones__adicionales" id="opcionesEvento" hidden>
                         <div class="formulario__grupo" id="grupo__fechaEvento">
                             <label for="fechaEvento" class="formulario__label">Fecha del evento:</label>
-                            <input type="date" class="formulario__input" id="fechaEvento" name="fechaEvento"><br><br>
+                            <input type="date" class="formulario__input" id="fechaEvento" name="fechaEvento" min='2022-10-10'><br><br>
                             <!-- <div class="formulario__grupo-input">
                             </div> -->
                         </div>
@@ -104,19 +104,35 @@
                         </div>
                         <div class="formulario__grupo" id="grupo__datosEvento">
                             <label for="datosEvento" class="formulario__label">Querés contarnos algo más:</label>
-                            <input type="text" class="formulario__input" id="datosEvento" name="datosEvento" value="temática, restricciones, etc..."><br><br>
+                            <input type="text" class="formulario__input" id="datosEvento" name="datosEvento" placeholder="Contanos algo sobre tu evento: la temática, alguna restricciones de los invitados, etc..."><br><br>
                             <!-- <div class="formulario__grupo-input">
                             </div> -->
                         </div>
                     </div>
                     <!-- Productos individuales. Opciones -->
                     <div class="formulario__opciones__adicionales" id="opcionesProducto" hidden>
-                        <!-- <div class="formulario__grupo" id="grupo__datosProducto">
-                            <label for="datosProducto" class="formulario__label">Querés contarnos algo más:</label>
-                            <input type="text" class="formulario__input" id="datosProducto" name="datosProducto" value="temática, restricciones, etc..."><br><br>
+                        <div class="formulario__grupo" id="grupo__listaProducto">
+                            <label for="producto_individual" class="formulario__label">Qué producto te interesa?:</label>
+                            <select class="formulario__input" name="producto_individual" id="producto_individual">
+                                <option disabled selected value> -- Elija una opción -- </option>
+                                <option value="budin_banana">Budín de Banana</option>
+                                <option value="cheesecake">Cheesecake</option>
+                                <option value="pavlova">Pavlova</option>
+                                <option value="pie_limon">Pie de Limón</option>
+                                <option value="profiteroles">Profiteroles</option>
+                                <option value="red_velvet">Red Velvet</option>
+                                <option value="tarta_frutas">Tarta de Frutas</option>
+                                <option value="torta_ricota">Torta de Ricota</option>
+                                <option value="otro">Otro producto</option>
+                            </select>
+                        </div>
+                        <div class="formulario__grupo" id="grupo__mensajeProducto">
+                            <label for="mensajeProducto" class="formulario__label">Querés contarnos algo más:</label>
+                            <!-- Se podría condicionar el texto a la opcion seleccionada!!!! -->
+                            <input type="text" class="formulario__input" id="mensajeProducto" name="mensajeProducto" placeholder="Ya pudiste disfrutar de nuestro producto"><br><br>
                             <div class="formulario__grupo-input">
                             </div>
-                        </div> -->
+                        </div>
                     </div>
                     <!-- Se puede agregar un desplegable de los productos de la otra solapa? -->
                     <!-- Comentarios. Opciones -->
@@ -131,13 +147,21 @@
 
                     <div class="formulario__grupo formulario__grupo-btn-enviar">
                         <button type="submit" class="formulario-btn">Enviar</button>
-                        <p class="formulario__mensaje-exito" id='formulario__mensaje-exito'>Gracias por completar el formulario!</p>
+                        <!-- <p class="formulario__mensaje-exito" id='formulario__mensaje-exito'>Gracias por completar el formulario!</p> -->
                     </div>
                     <!-- <input type="submit" value="Enviar"> -->
-                </fieldset>
+                <!-- </fieldset> -->
                 <span>Consultanos por cualquiera de nuestros productos. Para garantizar disponibilidad, te pedimos que nos avises con 48hs de anticipación.</span><br><br>
             </form>
 
+            <!-- Formulario si es catering/eventos (fecha) o si es producto particular, regalo, dia de los enamorados, recetas -->
+            <!-- presupuesto/reserva directa. prespupesto sobre eventos o particulares -->
+            <!-- Respuesta/mail autormatica con "gracias por contactarnos" -->
+<!-- mail y mapa?? -->
+<!-- bot de whatsapp  -->
+
+
+            <!-- <button id="contactanos-boton">Enviar</button> -->
             <div class="contactanos_mapa" style="align-items: center;">
                 <p class="mapa_texto">También podés visitarnos en nuestro local a la calle!</p>
                 <!-- pequeño -->
@@ -148,17 +172,9 @@
                 <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2784.900265958363!2d-58.42734141007202!3d-34.589080425394876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1665976116553!5m2!1ses-419!2sar" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
                 <!-- <iframe src="" frameborder="0"></iframe> -->
             </div>
-
-            <!-- Formulario si es catering/eventos (fecha) o si es producto particular, regalo, dia de los enamorados, recetas -->
-            <!-- presupuesto/reserva directa. prespupesto sobre eventos o particulares -->
-            <!-- Respuesta/mail autormatica con "gracias por contactarnos" -->
-<!-- mail y mapa?? -->
-<!-- bot de whatsapp  -->
-
-
-            <!-- <button id="contactanos-boton">Enviar</button> -->
         </div>
-    <!-- </main> -->
+
+<!-- </main> -->
 
     <footer id="idfooter">
     </footer>

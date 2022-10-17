@@ -388,7 +388,7 @@ Extra large devices (large laptops and desktops, 1200px and up)
 -----------------------------------------------------------------------------------
 */
 
-.formulario_contacto {
+.formulario_contacto, form {
   display: grid;
   grid-template-columns: 1fr 1fr;  /* Cambiar esto para los media queries!!*/
   gap: 20px; /*innecesario?*/
@@ -420,15 +420,15 @@ input::-webkit-inner-spin-button {
 }
 
 .formulario__input_incorrecto {
-  border: "3px solid red"
+  border: 3px solid red
 }
 
 .formulario__input_correcto {
-  border: "3px solid red"
+  border: 3px solid green
 }
 
 .formulario__input_neutro {
-  border: "3px solid transparent"
+  border: 3px solid transparent
 }
 
 /* .formulario__validacion-estado {
@@ -440,11 +440,11 @@ input::-webkit-inner-spin-button {
   opacity: 0; /* para q aparezca cuando haya error!
 } */
 
-.formulario__grupo-btn-enviar {
+/* .formulario__grupo-btn-enviar {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 
 .formulario-btn {
   cursor: pointer;
@@ -456,6 +456,9 @@ input::-webkit-inner-spin-button {
   font-size: 14px; /*innecesario?*/
 }
 
+iframe {
+  border-radius: 10px;
+}
 
 @media screen and (max-width: 800px) {
   .formulario_contacto {

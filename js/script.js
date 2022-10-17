@@ -32,7 +32,7 @@ document.getElementById("idfooter").innerHTML=footer
 
 // Funciones del form
 
-var opcionesAsuntos = ['opcionesRegalo', 'opcionesEvento', 'opcionesProducto', 'opcionesComentario'];
+// var opcionesAsuntos = ['opcionesRegalo', 'opcionesEvento', 'opcionesProducto', 'opcionesComentario'];
 function ocultarOpcionesForm() {
     // for (asunto in opcionesAsuntos) {
     //     let opciones = document.getElementById(asunto);
@@ -48,7 +48,7 @@ function ocultarOpcionesForm() {
     opcion4.style.display = 'none';
 }
 
-// Borrar contenido si se cambia la opcion!!
+// Falta borrar contenido si se cambia la opcion!!
 const opciones = {regalo: 'opcionesRegalo', eventos: 'opcionesEvento', productos: 'opcionesProducto', comentarios: 'opcionesComentario'};
 function mostrarOpcionesForm() {
     let asunto = document.getElementById('asunto').value;
@@ -60,45 +60,145 @@ function mostrarOpcionesForm() {
     opcionElegida.style.display = 'block';
 }
 
+
+
 const formulario = document.getElementById('formulario')
 const inputs = document.querySelectorAll('#formulario inputs')
-
 const reg_exp = {
-    nombre: /^[a-zA-ZÀ-ÿ\s]{1-40}$/,
+    nombre: /^[a-zA-ZÀ-ÿ\s]{1,50}$/,
     mail: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-    telefono: /^\d{8-12}$/, //de 8 a 12 números (por el código sin ceros)
-
+    celular: /^\d{8,12}$/, //de 8 a 12 números (por el código sin ceros)
 }
 
-formulario.addEventListener('submit', validarNombre);
-// formulario.addEventListener('submit', (e) => {
-//     e.preventDefault();
-// });
+var validarOpcionesAdicionales = function (e) {
+    let asunto = document.getElementById('asunto').value;
+    if (asunto == "regalo") {
+        validarMotivoRegalo(e)
+        validarFecha(e, "fechaRegalo")
+    } else if (asunto == "eventos") {
+        validarFecha(e, "fechaEvento")
+// if (formulario.cantidad.value <= 0) { // Si el campo id="cantidad" del form está vacio...
+//     alert("La cantidad de personas debe ser positiva.")
+//     e.preventDefault()
+// }
+        // validarDatosEvento(e)
+    } else if (asunto == "productos") {
+        validarMensajeProducto(e)
+    }
 
-var validarNombre = function (e) {
-    // if (formulario.nombre.value == 0) { // Si el campo id="nombre" del form está vacio...
-    if (reg_exp.nombre.test(e.target.value)) { // Si el campo id="nombre" del form está vacio...
-        // minuto 18
-        // cambiar color del borde a rojo
-        // alert("Completa el campo nombre")
-        // e.preventDefault()
-        document.getElementById("grupo__nombre").classList.remove("formulario__input_incorrecto")
-        document.getElementById("grupo__nombre").classList.add("formulario__input_correcto")
+    // document.getElementById("mail").classList.remove("formulario__input_neutro")
+    // if (reg_exp.mail.test(formulario.mail.value)) { // Si el campo id="nombre" del form está vacio...
+    //     console.log('se ejecuta True');
+    //     document.getElementById("mail").classList.remove("formulario__input_incorrecto")
+    //     document.getElementById("mail").classList.add("formulario__input_correcto")
+    // } else {
+    //     console.log('se ejecuta False');
+    //     document.getElementById("mail").classList.remove("formulario__input_correcto")
+    //     document.getElementById("mail").classList.add("formulario__input_incorrecto")
+    //     e.preventDefault();
+    // }
+}
+
+var today = new Date();
+var tomorrow = new Date();
+tomorrow.setDate(today.getDate() + 2)
+document.getElementById("fechaEvento").attr("min", tomorrow.getFullYear()+'-'+(tomorrow.getMonth()+1)+'-'+tomorrow.getDate());
+
+// var validarMail = function (e) {
+//     document.getElementById("mail").classList.remove("formulario__input_neutro")
+//     if (reg_exp.mail.test(formulario.mail.value)) { // Si el campo id="nombre" del form está vacio...
+//         console.log('se ejecuta True');
+//         document.getElementById("mail").classList.remove("formulario__input_incorrecto")
+//         document.getElementById("mail").classList.add("formulario__input_correcto")
+//     } else {
+//         console.log('se ejecuta False');
+//         document.getElementById("mail").classList.remove("formulario__input_correcto")
+//         document.getElementById("mail").classList.add("formulario__input_incorrecto")
+//         e.preventDefault();
+//     }
+// }
+
+var validarMail = function (e) {
+    validarField(e, reg_exp.mail, formulario.mail, "mail")
+}
+
+function validarField (e, reg_exp, event, field) {
+    document.getElementById(field).classList.remove("formulario__input_neutro")
+    if (reg_exp.test(event.value)) { // Si el campo id="nombre" del form está vacio...
+        console.log('se ejecuta True');
+        document.getElementById(field).classList.remove("formulario__input_incorrecto")
+        document.getElementById(field).classList.add("formulario__input_correcto")
+        campos_check[field] = true;
     } else {
-        document.getElementById("grupo__nombre").classList.remove("formulario__input_correcto")
-        document.getElementById("grupo__nombre").classList.add("formulario__input_incorrecto")
+        console.log('se ejecuta False');
+        document.getElementById(field).classList.remove("formulario__input_correcto")
+        document.getElementById(field).classList.add("formulario__input_incorrecto")
+        campos_check[field] = false;
         e.preventDefault();
     }
 }
 
+var validarCelular = function (e) {
+    document.getElementById("celular").classList.remove("formulario__input_neutro")
+    if (reg_exp.celular.test(formulario.celular.value)) { // Si el campo id="nombre" del form está vacio...
+        console.log('se ejecuta True');
+        document.getElementById("celular").classList.remove("formulario__input_incorrecto")
+        document.getElementById("celular").classList.add("formulario__input_correcto")
+    } else {
+        console.log('se ejecuta False');
+        document.getElementById("celular").classList.remove("formulario__input_correcto")
+        document.getElementById("celular").classList.add("formulario__input_incorrecto")
+        e.preventDefault();
+    }
+}
+
+var validarNombre = function (e) {
+    // if (formulario.nombre.value == 0) { // Si el campo id="nombre" del form está vacio...
+    console.log('se ejecuta');
+    document.getElementById("nombre").classList.remove("formulario__input_neutro")
+    if (reg_exp.nombre.test(formulario.nombre.value)) { // Si el campo id="nombre" del form está vacio...
+        console.log('se ejecuta True');
+        // minuto 18
+        // cambiar color del borde a rojo
+        // alert("Completa el campo nombre")
+        // e.preventDefault()
+        document.getElementById("nombre").classList.remove("formulario__input_incorrecto")
+        document.getElementById("nombre").classList.add("formulario__input_correcto")
+    } else {
+        console.log('se ejecuta False');
+        document.getElementById("nombre").classList.remove("formulario__input_correcto")
+        document.getElementById("nombre").classList.add("formulario__input_incorrecto")
+        e.preventDefault();
+    }
+}
+
+var validarTodo = function (e) {
+    // e.preventDefault();
+    validarNombre(e);
+    validarCelular(e)
+    validarMail(e)
+    //     validarOpcionesAdicionales(e)
+    // if (all fields are True) {alert('Gracias por completar el formulario!\    nA la brevedad nos contactaremos con vos.')} else {alert('Por favor completá el formulario antes de enviar')}
+}
+
+formulario.addEventListener('submit', validarTodo);
+// formulario.addEventListener('submit', (e) => {
+//     e.preventDefault();
+// });
 
 // // // const validarFormulario = (e) => {
 // // //     switch (e.target.name)
 // // // }
 
+const campos_check = {
+    nombre: false,
+    celular: false,
+    mail: false
+}
 // function validarFormulario() {
 //     e.preventDefault();
-//     if (campos_chequeados) {  // si todos los campos son true, sale del formulario correctamente, y lo resetea y borra todos los iconos
+// // // // // // // en validar se ajusta!!!
+//     if (campos_check) {  // si todos los campos son true, sale del formulario correctamente, y lo resetea y borra todos los iconos
 //         formulario.reset();
 //         alert('Todo ok con el formulario')
 //     } else {
@@ -106,15 +206,7 @@ var validarNombre = function (e) {
 //     }
 // }
 
-// // el error q sea con los borders
-// // border: 3px solid transparent;
-// // border: 3px solid red;
-// // border: 3px solid green;
 
-// if (formulario.cantidad.value <= 0) { // Si el campo id="cantidad" del form está vacio...
-//     alert("La cantidad de personas debe ser positiva.")
-//     e.preventDefault()
-// }
 
 // // console.log(document.querySelectorAll("h3"));
 
