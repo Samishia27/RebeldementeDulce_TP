@@ -60,6 +60,7 @@ a:hover{
   text-decoration: none;
   overflow-y: auto;
   flex-grow: 1;
+  cursor: pointer;
 }
   
 /*DISEÑO INDEX*/
@@ -245,9 +246,144 @@ h3{
   cursor: pointer;
 }
 
-/* DISEÑO CONTACTANOS */
+/* 
+-----------------------------------------------------------------------------------
+                            ESTILOS DE LA PAGINA CONTACTANOS                         
+-----------------------------------------------------------------------------------
+*/
 
-/* AQUI - AQUI- AQUI - AQUI - AQUI -AQUI -AQUI- AQUI - AQUI - AQUI -AQUI */
+.contactanos_mapa {
+  /* display: grid; */
+  text-align: center;
+  justify-content: center;
+  /* gap: 20px; */
+  color: #d079fc;
+}
+
+.mapa_texto {
+  margin: 10px;
+}
+
+p.mapa_texto {
+  margin: 10px;
+  font-size: 1rem;
+  text-align: center;
+  color: #d079fc;
+}
+
+
+.formulario_container, form {
+  display: grid;
+  grid-template-columns: 50% 50% ; /*1fr 1fr;  /* Cambiar esto para los media queries!!*/
+  column-gap: 10px; /*innecesario?*/
+  row-gap: 0px; /*20px*/
+  padding: 10px;
+  color: #d079fc;
+}
+
+.formulario__grupo {
+  padding: 10px;
+  text-align: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  width: 100%;
+  /* color: #d079fc; */
+}
+
+.formulario__label {
+  display: block; /* Para ocupar todo el ancho*/
+  padding: 10 px; /*innecesario?*/
+  /* font-weight: 700; negrita */
+  /* cursor: pointer; */
+  font-style: italic;
+}
+
+.formulario__input {
+  width: 100%;
+  /* height: 45px; */
+  /* line-height: 45px; */
+  padding:10px;
+}
+
+/* Chrome, Safari, Edge, Opera: sin flechas si es número */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.formulario__input_incorrecto {
+  border: 3px solid red
+}
+
+.formulario__input_correcto {
+  border: 3px solid green
+}
+
+.formulario__input_neutro {
+  border: 3px solid transparent
+}
+
+/* .formulario__validacion-estado {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+  z-index: 100;
+  font-size:16px;
+  opacity: 0; /* para q aparezca cuando haya error!
+} */
+
+
+.formulario-btn {
+  cursor: pointer;
+  width: 40%;
+  padding: 0;
+  /* grid-column: 1 / 3;  */
+  /* grid-area: miArea; */
+  color: #530d77;
+}
+
+/* .formulario__mensaje-exito {
+  display: none;
+  font-size: 14px; /*innecesario?
+} */
+/* #grupo__mensajeProducto */
+#grupo__mensajeRegalo, #grupo__textoComentario, #grupo__datosEvento, .formulario__grupo-btn-enviar {
+  grid-column: 1 / -1;
+}
+
+.formulario__grupo-btn-enviar {
+  align-self: center;
+  /* display: flex;
+  justify-content: center; */
+  align-items: center;
+  height: 80%;
+}
+
+textarea {
+  width: 100%;
+  overflow-y: auto;
+/*  grid-template-columns: 100% ; /*1fr 1fr;  /* Cambiar esto para los media queries!!*/
+}
+
+iframe {
+  border-radius: 10px;
+}
+
+/* Boton de Whatsapp */
+.boton_whatsapp {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+.boton_whatsapp>img {
+  width: 80px;
+}
+
+.boton_whatsapp:hover {
+  opacity: 0.7;
+  }
 
 /* DISEÑO FOOTER */
 

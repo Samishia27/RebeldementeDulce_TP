@@ -15,7 +15,7 @@ let footer =`
             <p class="pie-pagina">Seguinos en nuestras Redes Sociales</p>
         </div>
         <div>
-            <a href="https://www.facebook.com/" target="_blank" class="enlace">
+            <a href="https://www.facebook.com/people/Rebeldemente-Dulce/100086828526739/" target="_blank" class="enlace">
                 <i class="fa-brands fa-square-facebook"></i>
             </a>
             <a href="https://www.instagram.com/rebeldementedulce/" target="_blank" class="enlace">
@@ -29,6 +29,12 @@ let footer =`
 `
 document.getElementById("idfooter").innerHTML=footer
 
+let boton_whatsapp =`
+        <a class="boton_whatsapp" href="https://wa.me/5491159496795/?text=Rebeldemente%20Dulce%20Whatsapp" target="_blank">
+            <img src="img/logo_whatsapp.png">
+        </a>
+`
+document.getElementById("boton_whatsapp").innerHTML=boton_whatsapp
 
 // Funciones del form
 
