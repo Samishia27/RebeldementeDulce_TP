@@ -10,39 +10,19 @@ html{
   font-family: Dulcelin;
 }
 
-/* h2{
-    color: white;
-    text-align: center;
-    font-size: 2rem;
-    margin: 5px 20px;
-    padding: 5px 20px;
-} */
-
 p{
   text-align:justify;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   text-shadow: 0.1rem 0.1rem 0.1 rgb(61, 60, 60);
   color: white;
   font-size: 2rem;
-  margin: 0.02rem;
-  padding: 0.05rem;
+  margin: 0.3rem;
+  padding: 0.3rem;
 }
 
-p.primeralinea{
-  text-indent: 3%;
-}
-
-.pie-pagina{
-  text-align:center;
-  text-shadow: 0.1rem 0.1rem 0.1rem rgb(61, 60, 60);
-  color: white;
-  font-size: 1.5rem;
-}
-/*
-ESTILOS NAV
-*/
+/*DISEÑO HEADER*/
 
 nav{
-  width: 100%;
   height: auto;
   margin: 5px;
   padding: 5px;
@@ -76,52 +56,227 @@ a:hover{
   border-radius: 3rem;
   background-color: #530d77;
   border: 0.15rem solid #d079fc;
+  box-shadow: 0rem 0rem 1rem #d079fc;
   text-decoration: none;
   overflow-y: auto;
   flex-grow: 1;
 }
   
+/*DISEÑO INDEX*/
 
-/*
-DISEÑO LOGO INDEX
-*/
 .logo{
   background-image: url("/img/Fondo-Escarcha.jpg");
   background-size: cover;
-  border: 2px black solid;
-  width: 100%;
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  align-content: flex-start;
-  align-items: center;
 }
 
-.inicio{
-  margin: auto;
+.logo img{
+  width: 25rem;
+  height: 25rem;
+}
+
+/* DISEÑO DEL TITULO */
+
+.tittle{
+  color:white;
+  font-family: Audiowide;
+  text-align: center;
+  font-weight: bold;
+  height: fit-content;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+h1{
+  display: inline-block;
+  position: relative;
+}
+
+.tittle h1::before, .tittle h1::after{
+  content: '';
+  position: absolute;
+  width: 6rem;
+  height: 0.3rem;
+  background-color: currentColor;
+  top: 1.5rem;
+}
+
+.tittle h1::before{
+  left: -8rem;
+}
+
+.tittle h1::after{
+  right: -8rem;
+}
+
+
+/* DISEÑO NOSOTROS */
+
+.nosotros{
+  
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  align-items: flex-start;
+}
+
+.nosotros p{
+  text-indent: 3%;
+  margin: 2rem;
+  padding: 2rem 3rem;
+  border-radius: 5rem;
+  background-color: #d079fc73;
+  background-blend-mode: color;
+  box-shadow: 0rem 0rem 2rem #d079fc;
+}
+
+.nosotros img{
+  height: 23rem;
+  width: fit-content;
+  margin: 2rem;
+  padding: auto;
+  border-radius: 3rem;
+  box-shadow: 0rem 0rem 25rem #d079fc;
+}
+
+/* DISEÑO PRODUCTOS */
+
+.container{
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  /* height: fit-content; */
+  justify-content: space-between;
+  /* align-items: center;
+  align-content: center; */
+}
+
+.box{
+  height: 40rem;
+  margin: 1rem 4rem;
+  padding: 1.2rem;
+  box-shadow: 0rem 0rem 8rem #d079fc6e;
+  background-color: #d079fcc7;
+  border-radius: 2rem;
+  border: 0.02rem rgb(61, 60, 60) dotted;
+}
+
+h3{
+  font-family: Dulcelin;
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2rem;
+  user-select: none;
+}
+
+.box .link{
+  text-decoration: none;
+  text-shadow: 0.1rem 0.2rem 0.1rem #d079fc;
+  color: #530d77;
+}
+
+.box p{
+  text-shadow: 0.2rem 0.1rem 0.3rem #000;
+  font-size: 1.2rem;
+  width: 12rem;
+  margin: 0rem 1.5rem;
+  text-align: center;
+  user-select: none;
+  padding: 0.5rem;
+}
+
+.card{
+  position: relative;
+  width: 15.625rem;
+  height: 15.625rem;
+  display: flex;
+  margin-left: 0.35rem;
+}
+
+.card .face{
+  position: absolute;
   width: 100%;
   height: 100%;
-  flex-grow: 1;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: .5s;
 }
+
+.card .front{
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0 0.5rem 1rem #000;
+}
+
+.card .front img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .back img{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 90%;
+  cursor: pointer;
+}
+
+.card .back{
+  transform: perspective(600px) rotateY(180deg);
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
+  box-shadow: 0 5px 10px black;
+  cursor: pointer;
+}
+
+.card:hover .front{
+  transform: perspective(600px) rotatey(180deg);
+  cursor: pointer;
+}
+
+.card:hover .back{
+  transform: perspective(600px) rotatey(360deg);
+  cursor: pointer;
+}
+
+/* DISEÑO CONTACTANOS */
+
+/* AQUI - AQUI- AQUI - AQUI - AQUI -AQUI -AQUI- AQUI - AQUI - AQUI -AQUI */
+
+/* DISEÑO FOOTER */
 
 footer{
   font-family: Audiowide;
   color: white;
-  width: 100%;
   height: fit-content;
   margin: 0.01rem;
   padding: 0.01rem;
   display: flex;
-  flex-direction: column-reverse;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
 }
+
 footer>div{
   margin: 0.02rem;
   padding: 0.02rem;
-
 }
+
 footer>div>p{
 font-size: 1rem;
+}
+
+.pie-pagina{
+  text-align:center;
+  text-shadow: 0.1rem 0.1rem 0.1rem rgb(61, 60, 60);
+  color: white;
+  font-size: 1.5rem;
 }
 
 .enlace{
@@ -133,9 +288,7 @@ font-size: 1rem;
   text-decoration: none;
 }
 
-/*
-ANIMACIONES
-*/
+/* ANIMACIONES */
 
 @keyframes deslizado_vertical {
     from {
@@ -167,9 +320,8 @@ ANIMACIONES
     }
   }
 
-/*
-FUENTES
-*/
+/* FUENTES */
+
 @font-face {
   font-family:Dulcelin;
   src: url(/fuentes/Dulcelin.otf);
@@ -180,8 +332,10 @@ FUENTES
   src: url(/fuentes/Audiowide.ttf);
 }
 
+/* MEDIA QUERIES */
+
 @media only screen and (max-width: 425px) {
-    html{
+    /* html{
       font-size: 8px;
     }
     footer{
@@ -189,18 +343,31 @@ FUENTES
       align-items: center;
       align-content: center;
     }
+    .container{
+      width: auto;
+      flex-wrap: nowrap;
+      height: fit-content;
+      flex-direction: column;
+      align-items: center;
+    } */
   }
 
   @media only screen and (min-width: 425px) {
+
     html{
       font-size: 10px;
     }
-    footer{
+
+    /* footer{
       flex-direction: column;
       align-items: center;
       align-content: center;
     }
-  }
+
+    .nosotros{
+      flex-direction: column;
+  } */
+}
 
 @media only screen and (min-width: 992px) {
   html{
@@ -213,148 +380,3 @@ FUENTES
     font-size: 16px;
   }
 }
-
-/* 
------------------------------------------------------------------------------------
-                            ESTILOS DE LA PAGINA PRODUCTO                         
------------------------------------------------------------------------------------
-*/
-
-/* ESTILO DEL TITULO */
-
-.tittle{
-  /* width: 100%; */
-  color:white;
-  font-family: Audiowide;
-  text-align: center;
-  font-weight: bold;
-  height: 3rem;
-  margin: 1rem;
-  padding: 1rem;
-}
-
-.tittle h1{
-  display: inline-block;
-  position: relative;
-}
-
-.tittle h1::before, .tittle h1::after{
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 0.3rem;
-  background-color: currentColor;
-  top: 1.5rem;
-}
-
-.tittle h1::before{
-  left: -32rem;
-}
-
-.tittle h1::after{
-  right: -32rem;
-}
-
-/* Contenedor de todas las cajas */
-
-.container{
-  width: 100%;
-  padding: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  height: fit-content;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-}
-
-.box{
-  height: 40rem;
-  margin: 1rem 4rem;
-  padding: 1.2rem;
-  background-color: #d079fc;
-  border-radius: 2rem;
-  border: 0.2rem rgb(61, 60, 60) dashed;
-}
-
-h3{
-  font-family: Audiowide;
-  text-align: center;
-  margin-top: 1rem;
-  font-size: 1.5em;
-  user-select: none;
-}
-
-.box .link{
-  text-decoration: none;
-  text-shadow: 0.1rem 0.2rem 0.1rem #d079fc;
-  color: #530d77;
-}
-
-.box p{
-  position: relative;
-  font-size: 1.5rem;
-  width: 15.265rem;
-  margin: 0.3rem;
-  text-align: center;
-  user-select: none;
-  padding: 0.5rem;
-}
-
-.card{
-  position: relative;
-  width: 15.625rem;
-  height: 15.625rem;
-  display: flex;
-}
-
-.card .face{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: .5s;
-}
-
-.card .front{
-  transform: perspective(600px) rotateY(0deg);
-  box-shadow: 0 5px 10px #000;
-}
-
-.card .front img{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.card .back img{
-  position: relative;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 80%;
-  cursor: pointer;
-}
-
-.card .back{
-  transform: perspective(600px) rotateY(180deg);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0 5px 10px black;
-  cursor: pointer;
-}
-
-.card:hover .front{
-  transform: perspective(600px) rotatey(180deg);
-  cursor: pointer;
-}
-
-.card:hover .back{
-  transform: perspective(600px) rotatey(360deg);
-  cursor: pointer;
-}
-
