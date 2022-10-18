@@ -471,9 +471,9 @@ font-size: 1rem;
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 425px) {
-    body{
+    /* body{
       background-color: red;
-    }
+    } */
 
     html{
       font-size: 8px;
@@ -491,9 +491,9 @@ font-size: 1rem;
 }
 
 @media screen and (min-width: 425px) and (max-width: 992px){
-  body{
+  /* body{
     background-color: orange;
-  }
+  } */
 
   html{
     font-size: 10px;
@@ -511,9 +511,9 @@ font-size: 1rem;
 }
 
 @media screen and (min-width: 992px) and (max-width:1200px){
-  body{
+  /* body{
     background-color: yellow;
-  }
+  } */
 
   html{
     font-size: 12px;
@@ -521,9 +521,9 @@ font-size: 1rem;
 }
 
 @media screen and (min-width: 1200px) {
-  body{
+  /* body{
     background-color: green;
-  }
+  } */
   html{
     font-size: 16px;
   }
