@@ -470,31 +470,16 @@ font-size: 1rem;
 
 /* MEDIA QUERIES */
 
-@media only screen and (max-width: 425px) {
-    /* html{
-      font-size: 8px;
+@media screen and (max-width: 425px) {
+    body{
+      background-color: red;
     }
-    footer{
-      flex-direction: column;
-      align-items: center;
-      align-content: center;
-    }
-    .container{
-      width: auto;
-      flex-wrap: nowrap;
-      height: fit-content;
-      flex-direction: column;
-      align-items: center;
-    } */
-  }
-
-  @media only screen and (min-width: 425px) {
 
     html{
-      font-size: 10px;
+      font-size: 8px;
     }
 
-    /* footer{
+    footer{
       flex-direction: column;
       align-items: center;
       align-content: center;
@@ -502,16 +487,43 @@ font-size: 1rem;
 
     .nosotros{
       flex-direction: column;
-  } */
+  }
 }
 
-@media only screen and (min-width: 992px) {
+@media screen and (min-width: 425px) and (max-width: 992px){
+  body{
+    background-color: orange;
+  }
+
+  html{
+    font-size: 10px;
+  }
+
+  footer{
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+
+  .nosotros{
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width:1200px){
+  body{
+    background-color: yellow;
+  }
+
   html{
     font-size: 12px;
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
+  body{
+    background-color: green;
+  }
   html{
     font-size: 16px;
   }
