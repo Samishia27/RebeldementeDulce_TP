@@ -387,28 +387,41 @@ Extra large devices (large laptops and desktops, 1200px and up)
                             ESTILOS DE LA PAGINA CONTACTANOS                         
 -----------------------------------------------------------------------------------
 */
-
-.formulario_contacto, form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;  /* Cambiar esto para los media queries!!*/
-  gap: 20px; /*innecesario?*/
+.contactanos_mapa {
+  text-align: center;
+  justify-content: center;
+  gap: 20px;
 }
 
-div.formulario__grupo {
+.formulario_container, form {
+  display: grid;
+  /* grid-template-areas: 'miArea miArea'
+                       'miArea2 miArea2'; */
+  grid-template-columns: 50% 50% ; /*1fr 1fr;  /* Cambiar esto para los media queries!!*/
+  column-gap: 10px; /*innecesario?*/
+  row-gap: 20px;
+  padding: 10px;
+}
+
+.formulario__grupo {
+  padding: 10px;
+  text-align: center;
   flex-direction: column;
+  width: 100%;
 }
 
 .formulario__label {
-  display: block;
+  display: block; /* Para ocupar todo el ancho*/
   padding: 10 px; /*innecesario?*/
   /* font-weight: 700; negrita */
   /* cursor: pointer; */
+  font-style: italic;
 }
 
-.formulario_input {
+.formulario__input {
   width: 100%;
-  height: 45px;
-  line-height: 45px;
+  /* height: 45px; */
+  /* line-height: 45px; */
   padding:10px;
 }
 
@@ -448,7 +461,9 @@ input::-webkit-inner-spin-button {
 
 .formulario-btn {
   cursor: pointer;
-  width: 30%;
+  width: 40%;
+  /* grid-column: 1 / 3;  */
+  /* grid-area: miArea; */
 }
 
 .formulario__mensaje-exito {
@@ -456,12 +471,21 @@ input::-webkit-inner-spin-button {
   font-size: 14px; /*innecesario?*/
 }
 
+textarea {
+  width: 100%;
+  /* grid-area: miArea2; */
+  grid-template-columns: 100% ; /*1fr 1fr;  /* Cambiar esto para los media queries!!*/
+}
+
 iframe {
   border-radius: 10px;
 }
 
+/* @media only screen and (max-width: 425px) { */
+
+
 @media screen and (max-width: 800px) {
-  .formulario_contacto {
-    grid-template-columns: 1fr;
+  .formulario_container form {
+    grid-template-columns: 100%;
   }
 }
