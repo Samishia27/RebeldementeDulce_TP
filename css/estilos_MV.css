@@ -388,24 +388,35 @@ Extra large devices (large laptops and desktops, 1200px and up)
 -----------------------------------------------------------------------------------
 */
 .contactanos_mapa {
+  /* display: grid; */
   text-align: center;
   justify-content: center;
-  gap: 20px;
+  /* gap: 20px; */
 }
+
+.mapa_texto {
+  margin: 10px;
+}
+
+p.mapa_texto {
+  margin: 10px;
+  font-size: 1rem;
+  text-align: center;
+}
+
 
 .formulario_container, form {
   display: grid;
-  /* grid-template-areas: 'miArea miArea'
-                       'miArea2 miArea2'; */
   grid-template-columns: 50% 50% ; /*1fr 1fr;  /* Cambiar esto para los media queries!!*/
   column-gap: 10px; /*innecesario?*/
-  row-gap: 20px;
+  row-gap: 0px; /*20px*/
   padding: 10px;
 }
 
 .formulario__grupo {
   padding: 10px;
   text-align: center;
+  /* justify-content: center; */
   flex-direction: column;
   width: 100%;
 }
@@ -453,28 +464,36 @@ input::-webkit-inner-spin-button {
   opacity: 0; /* para q aparezca cuando haya error!
 } */
 
-/* .formulario__grupo-btn-enviar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
 
 .formulario-btn {
   cursor: pointer;
   width: 40%;
+  padding: 0;
   /* grid-column: 1 / 3;  */
   /* grid-area: miArea; */
 }
 
-.formulario__mensaje-exito {
+/* .formulario__mensaje-exito {
   display: none;
-  font-size: 14px; /*innecesario?*/
+  font-size: 14px; /*innecesario?
+} */
+/* #grupo__mensajeProducto */
+#grupo__mensajeRegalo, #grupo__textoComentario, #grupo__datosEvento, .formulario__grupo-btn-enviar {
+  grid-column: 1 / -1;
+}
+
+.formulario__grupo-btn-enviar {
+  align-self: center;
+  /* display: flex;
+  justify-content: center; */
+  align-items: center;
+  height: 80%;
 }
 
 textarea {
   width: 100%;
-  /* grid-area: miArea2; */
-  grid-template-columns: 100% ; /*1fr 1fr;  /* Cambiar esto para los media queries!!*/
+  overflow-y: auto;
+/*  grid-template-columns: 100% ; /*1fr 1fr;  /* Cambiar esto para los media queries!!*/
 }
 
 iframe {
@@ -489,3 +508,22 @@ iframe {
     grid-template-columns: 100%;
   }
 }
+
+
+
+
+
+/* Boton de Whatsapp */
+.boton_whatsapp {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+.boton_whatsapp>img {
+  width: 80px;
+}
+
+.boton_whatsapp:hover {
+  opacity: 0.7;
+  }

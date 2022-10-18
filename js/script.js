@@ -67,6 +67,7 @@ const reg_exp = {
     nombre: /^[a-zA-ZÀ-ÿ\s]{1,50}$/,
     mail: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     celular: /^\d{8,12}$/, //de 8 a 12 números (por el código sin ceros)
+    texto: /^[a-zA-ZÀ-ÿ0-9_.+-\s]{1,500}$/,
 }
 
 var today = new Date();
@@ -96,17 +97,19 @@ var validarFecha = function (e, event, field) {
 var validarOpcionesAdicionales = function (e) {
     let asunto = document.getElementById('asunto').value;
     if (asunto == "regalo") {
-        validarField(e, reg_exp.nombre, formulario.motivoRegalo, "motivoRegalo")
+        validarField(e, reg_exp.texto, formulario.motivoRegalo, "motivoRegalo")
         validarFecha(e, formulario.fechaRegalo, "fechaRegalo")
+        // validarField(e, reg_exp.texto, formulario.mensajeRegalo, "mensajeRegalo")
     } else if (asunto == "eventos") {
         validarFecha(e, formulario.fechaEvento, "fechaEvento")
+        validarField(e, reg_exp.texto, formulario.datosEvento, "datosEvento")
 // if (formulario.cantidad.value <= 0) { // Si el campo id="cantidad" del form está vacio...
 //     alert("La cantidad de personas debe ser positiva.")
 //     e.preventDefault()
 // }
         // validarDatosEvento(e)
     } else if (asunto == "productos") {
-        validarField(e, reg_exp.nombre, formulario.mensajeProducto, "mensajeProducto")
+        validarField(e, reg_exp.texto, formulario.mensajeProducto, "mensajeProducto")
     }
 } 
 
