@@ -28,3 +28,35 @@ let footer =`
     </div>
 `
 document.getElementById("idfooter").innerHTML=footer
+
+
+// Funciones del form
+
+var opcionesAsuntos = ['opcionesRegalo', 'opcionesEvento', 'opcionesProducto', 'opcionesComentario'];
+function ocultarOpcionesForm() {
+    // for (asunto in opcionesAsuntos) {
+    //     let opciones = document.getElementById(asunto);
+    //     opciones.style.display = 'none';
+    // }
+    let opcion1 = document.getElementById('opcionesRegalo');
+    opcion1.style.display = 'none';
+    let opcion2 = document.getElementById('opcionesEvento');
+    opcion2.style.display = 'none';
+    let opcion3 = document.getElementById('opcionesProducto');
+    opcion3.style.display = 'none';
+    let opcion4 = document.getElementById('opcionesComentario');
+    opcion4.style.display = 'none';
+}
+
+const opciones = {regalo: 'opcionesRegalo', eventos: 'opcionesEvento', productos: 'opcionesProducto', comentarios: 'opcionesComentario'};
+function mostrarOpcionesForm() {
+    let asunto = document.getElementById('asunto').value;
+    // console.log(asunto);
+    // console.log(opciones[asunto]);
+
+    ocultarOpcionesForm();
+    let opcionElegida = document.getElementById(opciones[asunto]);
+    opcionElegida.style.display = 'block';
+}
+
+console.log(document.querySelectorAll("h3"));
