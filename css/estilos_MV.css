@@ -1,0 +1,529 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html{
+  height: 100%;
+  background-color: #d079fc;
+  font-family: Dulcelin;
+}
+/* :root{
+  font-size: 16px;
+} */
+/* 
+header{
+  margin: 1px;
+  padding: 1px;
+  margin: auto;
+} */
+
+h2{
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    margin: 5px 20px;
+    padding: 5px 20px;
+}
+
+p{
+  text-align:justify;
+  text-shadow: 1px 1px 1px white;
+  color:#530d77;
+  font-size: 2rem;
+  margin: 0.02rem;
+  padding: 0.05rem;
+}
+
+p.primeralinea{
+  text-indent: 3%;
+}
+
+.pie-pagina{
+  text-align:center;
+  text-shadow: 1px 1px 1px white;
+  color:#530d77;
+  font-size: 2rem;
+}
+/*
+ESTILOS NAV
+*/
+
+nav{
+  width: 100%;
+  height: auto;
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: center;
+}
+
+a:hover{
+  color: white;
+  font-weight: bolder;
+  text-shadow: 3px 3px 3px grey;
+}
+
+.index{
+  animation-duration: 3s;
+  animation-name: deslizado_vertical;
+}
+
+.boton{
+  /* image.png */
+  text-align: center;
+  color: black;
+  text-shadow: 3px 3px 3px #dea6fa;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 30px;
+  background-color: #530d77;
+  border: 2px solid white;
+  text-decoration: none;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+  
+
+/*
+DISEÑO LOGO INDEX
+*/
+main>div{
+  background-image: url("/img/Fondo-Escarcha.jpg");
+  background-size: cover;
+  border: 2px black solid;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: center;
+}
+
+.Logo{
+  background-color: black;
+  width: 40rem;
+  height: 40rem;
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: flex-start;
+  align-items: center;
+}
+
+.inicio{
+  margin: auto;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+ 
+}
+
+footer{
+  width: 100%;
+  height: auto;
+  margin: 2px;
+  padding: 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+footer>div{
+  margin: 0.02rem;
+  padding: 0.02rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer>div>p{
+font-size: 1rem;
+}
+
+.enlace{
+  color: #530d77;
+  font-size: 5vw;
+  padding: 1vw 2vw 1vw;
+  top: 50vw;
+  left: 90vh;
+  text-decoration: none;
+}
+
+/*
+ANIMACIONES
+*/
+
+@keyframes deslizado_vertical {
+    from {
+      margin-top: 100%;
+      height: 100%
+    }
+  
+    to {
+      margin-top: 0%;
+      height: 100%;
+    }
+
+    75% {
+        font-size: 200%;
+        margin-top: 25%;
+        height: 150%;
+      }
+  }
+
+@keyframes deslizado_horizontal {
+    from {
+      margin-left: 100%;
+      width: 300%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+/*
+FUENTES
+*/
+@font-face {
+  font-family:Dulcelin;
+  src: url(fuentes/Dulcelin.otf);
+}
+  
+@media only screen and (max-width: 425px) {
+    html{
+      font-size: 8px;
+    }
+    footer{
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+    }
+  }
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 992px) {
+  html{
+    font-size: 12px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  html{
+    font-size: 16px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up)
+@media only screen and (min-width: 992px) {...}
+
+Extra large devices (large laptops and desktops, 1200px and up)
+@media only screen and (min-width: 1200px) {...} */
+
+/* 
+-----------------------------------------------------------------------------------
+                            ESTILOS DE LA PAGINA PRODUCTO                         
+-----------------------------------------------------------------------------------
+*/
+
+/* ESTILO DEL TITULO */
+
+.tittle{
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  height: 50px;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.tittle h1{
+  display: inline-block;
+  position: relative;
+  color: rgba(41, 18, 41, 0.74)
+}
+
+.tittle h1::before, .tittle h1::after{
+  content: '';
+  position: absolute;
+  width:300px;
+  height: 3px;
+  background-color: currentColor;
+  top: 0.6em;
+}
+
+.tittle h1::before{
+  left: -320px;
+}
+
+.tittle h1::after{
+  right: -320px;
+}
+
+/* Contenedor de todas las cajas */
+
+.container{
+  /* border: 2px dashed black; */
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  height: 1000px;
+  justify-content: space-around;
+
+}
+
+.box{
+  /* border: 2px solid black; */
+  height: 460px;
+  margin: 0px 60px 0px 60px;
+}
+
+.box h3{
+  text-align: center;
+  margin-top: 15px;
+  font-size: 1.5em;
+  user-select: none;
+}
+
+.box .link{
+  text-decoration: none;
+  text-shadow: none;
+  color: black;
+}
+
+.box .link:hover{
+  color: rgba(255, 255, 255, 0.699);
+  text-decoration:underline;
+}
+
+
+
+.box p{
+  position: relative;
+  font-size: 1.1em;
+  width: 250px;
+  text-shadow: none;
+  color: black;
+  margin-top: 5px;
+  text-align: center;
+  user-select: none;
+  padding: 5px;
+}
+
+.card{
+  position: relative;
+  width: 250px;
+  height: 250px;
+  display: flex;
+}
+
+.card .face{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.card .front{
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0 5px 10px #000;
+}
+
+.card .front img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .back img{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 80%;
+  cursor: pointer;
+}
+
+.card .back{
+  transform: perspective(600px) rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 5px 10px black;
+  cursor: pointer;
+}
+
+.card:hover .front{
+  transform: perspective(600px) rotatey(180deg);
+  cursor: pointer;
+}
+
+.card:hover .back{
+  transform: perspective(600px) rotatey(360deg);
+  cursor: pointer;
+}
+
+
+
+/* 
+-----------------------------------------------------------------------------------
+                            ESTILOS DE LA PAGINA CONTACTANOS                         
+-----------------------------------------------------------------------------------
+*/
+.contactanos_mapa {
+  /* display: grid; */
+  text-align: center;
+  justify-content: center;
+  /* gap: 20px; */
+}
+
+.mapa_texto {
+  margin: 10px;
+}
+
+p.mapa_texto {
+  margin: 10px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+
+.formulario_container, form {
+  display: grid;
+  grid-template-columns: 50% 50% ; /*1fr 1fr;  /* Cambiar esto para los media queries!!*/
+  column-gap: 10px; /*innecesario?*/
+  row-gap: 0px; /*20px*/
+  padding: 10px;
+}
+
+.formulario__grupo {
+  padding: 10px;
+  text-align: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  width: 100%;
+}
+
+.formulario__label {
+  display: block; /* Para ocupar todo el ancho*/
+  padding: 10 px; /*innecesario?*/
+  /* font-weight: 700; negrita */
+  /* cursor: pointer; */
+  font-style: italic;
+}
+
+.formulario__input {
+  width: 100%;
+  /* height: 45px; */
+  /* line-height: 45px; */
+  padding:10px;
+}
+
+/* Chrome, Safari, Edge, Opera: sin flechas si es número */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.formulario__input_incorrecto {
+  border: 3px solid red
+}
+
+.formulario__input_correcto {
+  border: 3px solid green
+}
+
+.formulario__input_neutro {
+  border: 3px solid transparent
+}
+
+/* .formulario__validacion-estado {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+  z-index: 100;
+  font-size:16px;
+  opacity: 0; /* para q aparezca cuando haya error!
+} */
+
+
+.formulario-btn {
+  cursor: pointer;
+  width: 40%;
+  padding: 0;
+  /* grid-column: 1 / 3;  */
+  /* grid-area: miArea; */
+}
+
+/* .formulario__mensaje-exito {
+  display: none;
+  font-size: 14px; /*innecesario?
+} */
+/* #grupo__mensajeProducto */
+#grupo__mensajeRegalo, #grupo__textoComentario, #grupo__datosEvento, .formulario__grupo-btn-enviar {
+  grid-column: 1 / -1;
+}
+
+.formulario__grupo-btn-enviar {
+  align-self: center;
+  /* display: flex;
+  justify-content: center; */
+  align-items: center;
+  height: 80%;
+}
+
+textarea {
+  width: 100%;
+  overflow-y: auto;
+/*  grid-template-columns: 100% ; /*1fr 1fr;  /* Cambiar esto para los media queries!!*/
+}
+
+iframe {
+  border-radius: 10px;
+}
+
+/* @media only screen and (max-width: 425px) { */
+
+
+@media screen and (max-width: 800px) {
+  .formulario_container form {
+    grid-template-columns: 100%;
+  }
+}
+
+
+
+
+
+/* Boton de Whatsapp */
+.boton_whatsapp {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+.boton_whatsapp>img {
+  width: 80px;
+}
+
+.boton_whatsapp:hover {
+  opacity: 0.7;
+  }
