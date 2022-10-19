@@ -170,10 +170,6 @@ h3{
   margin-top: 2rem;
   font-size: 2rem;
   user-select: none;
-}
-
-.box .link{
-  text-decoration: none;
   text-shadow: 0.1rem 0.2rem 0.1rem #d079fc;
   color: #530d77;
 }
@@ -181,11 +177,10 @@ h3{
 .box p{
   text-shadow: 0.2rem 0.1rem 0.3rem #000;
   font-size: 1.2rem;
-  width: 12rem;
-  margin: 0rem 1.5rem;
+  width: 15rem;
   text-align: center;
   user-select: none;
-  padding: 0.5rem;
+
 }
 
 .card{
