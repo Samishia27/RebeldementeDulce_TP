@@ -1,0 +1,18 @@
+SAM
+media-queries (índex y nosotros)
+
+
+LEO
+Productos
+las últimas 3 tarjetas están desalineadas --> ver flex-wrap
+quitar los links
+
+
+MATI
+pasar todo a rem
+media-queries formulario
+alerta de formulario
+php: mail
+
+redondear inputs
+mapa cuadrado con sombra
