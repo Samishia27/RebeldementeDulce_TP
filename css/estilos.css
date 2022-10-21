@@ -11,13 +11,19 @@ html{
 }
 
 p{
-  text-align:justify;
+  text-align: justify;
   font-family: Georgia, 'Times New Roman', Times, serif;
   text-shadow: 0.1rem 0.1rem 0.1 rgb(61, 60, 60);
   color: white;
   font-size: 2rem;
-  margin: 0.3rem;
+  margin: 1rem;
   padding: 0.3rem;
+}
+
+h2{
+  margin-left: 2rem;
+  text-align: center;
+  font-size: 3.7rem;
 }
 
 /*DISEÑO HEADER*/
@@ -66,15 +72,17 @@ a:hover{
 /*DISEÑO INDEX*/
 
 .logo{
-  background-image: url("/img/Fondo-Escarcha.jpg");
+  background-image: url("/img/Fondo-Escarcha-3.jpg");
+  opacity: none;
   background-size: cover;
   display: flex;
   justify-content: center;
+  opacity: 95%;
 }
 
 .logo img{
-  width: 25rem;
-  height: 25rem;
+  width: 28rem;
+  height: 28rem;
 }
 
 /* DISEÑO DEL TITULO */
@@ -114,31 +122,56 @@ h1{
 
 /* DISEÑO NOSOTROS */
 
-.nosotros{
-  
+.presentacion{
   display: flex;
   flex-direction: row;
-  align-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 }
 
-.nosotros p{
-  text-indent: 3%;
-  margin: 2rem;
-  padding: 2rem 3rem;
-  border-radius: 5rem;
-  background-color: #d079fc73;
-  background-blend-mode: color;
+.logo_chico{
+  height: 12rem;
+  width: 12rem;
+  margin: 0.5rem 3rem 0rem;
+}
+
+.sobre_nosotros{
+  display: flex;
+  flex-direction: row;
+  background-color: #d079fcc7;
   box-shadow: 0rem 0rem 2rem #d079fc;
+  border-radius: 5rem;
+  margin: 2rem 3rem;
+  padding: 0.3rem 0.5rem;
+  text-shadow: 0.1rem 0.1rem 0.1rem rgb(61, 60, 60);
 }
 
-.nosotros img{
-  height: 23rem;
-  width: fit-content;
-  margin: 2rem;
-  padding: auto;
+.sobre_nosotros p{
+  text-indent: 3rem;
+  text-align: justify;
+  margin: 0rem 3rem;
+  text-shadow: 0.1rem 0.1rem 0.1rem #530d77;
+}
+
+.mision_vision p{
+  text-indent: 3rem;
+  text-align: justify;
+  margin: 1rem 4rem;
+  text-shadow: 0.1rem 0.1rem 0.1rem rgb(61, 60, 60);
+}
+
+.imagen{
+  height: 20rem;
+  width: 20rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
   border-radius: 3rem;
-  box-shadow: 0rem 0rem 25rem #d079fc;
+  /* box-shadow: 0rem 0rem 25rem #d079fc; */
+}
+.frase h3{
+  color: #530d77;
+  font-size: 3rem;
+  font-family: Dulcelin;
+  margin-right: 6rem;
 }
 
 /* DISEÑO PRODUCTOS */
@@ -157,10 +190,9 @@ h1{
   height: 40rem;
   margin: 1rem 4rem;
   padding: 1.2rem;
-  box-shadow: 0rem 0rem 8rem #d079fc6e;
+  box-shadow: 0rem 0rem 2rem #d079fc;
   background-color: #d079fcc7;
   border-radius: 2rem;
-  border: 0.02rem rgb(61, 60, 60) dotted;
 }
 
 h3{
@@ -406,10 +438,11 @@ footer>div{
 
 footer>div>p{
 font-size: 1rem;
+margin-right: 6rem;
 }
 
 .pie-pagina{
-  text-align:center;
+  text-align: center;
   text-shadow: 0.1rem 0.1rem 0.1rem rgb(61, 60, 60);
   color: white;
   font-size: 1.5rem;
@@ -417,9 +450,10 @@ font-size: 1rem;
 
 .enlace{
   color: #530d77;
+  text-align: center;
   text-shadow: 0.1rem 0.1rem 0.1rem #d079fc;
-  font-size: 3rem;
-  margin: 0.02rem;
+  font-size: 4rem;
+  margin: 0.1rem;
   padding: 0.5rem 1.5rem 0.5rem;
   text-decoration: none;
 }
@@ -444,17 +478,6 @@ font-size: 1rem;
       }
   }
 
-@keyframes deslizado_horizontal {
-    from {
-      margin-left: 100%;
-      width: 300%
-    }
-  
-    to {
-      margin-left: 0%;
-      width: 100%;
-    }
-  }
 
 /* FUENTES */
 
@@ -481,19 +504,27 @@ font-size: 1rem;
 
     footer{
       flex-direction: column;
-      align-items: center;
-      align-content: center;
+      justify-content: center;
+      align-content: flex-start;
     }
 
-    .nosotros{
+    .presentacion{
+      display: flex;
       flex-direction: column;
-  }
+      align-items: center;
+    }
+    .sobre_nosotros{
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+    }
 }
 
 @media screen and (min-width: 425px) and (max-width: 992px){
-  /* body{
+  body{
     background-color: orange;
-  } */
+  }
 
   html{
     font-size: 10px;
@@ -505,8 +536,15 @@ font-size: 1rem;
     align-content: center;
   }
 
-  .nosotros{
+  .titulo{
+    display: flex;
     flex-direction: column;
+    align-items: center;
+  }
+
+  .parrafo{
+    display: flex;
+    flex-direction: row;
   }
 }
 

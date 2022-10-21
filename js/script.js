@@ -14,7 +14,7 @@ let footer =`
         <div>
             <p class="pie-pagina">Seguinos en nuestras Redes Sociales</p>
         </div>
-        <div>
+        <div class="enlace">
             <a href="https://www.facebook.com/people/Rebeldemente-Dulce/100086828526739/" target="_blank" class="enlace">
                 <i class="fa-brands fa-square-facebook"></i>
             </a>
@@ -23,7 +23,11 @@ let footer =`
             </a>
         </div>
     </div>
+
     <div>
+        <div class="frase">
+            <h3>Hacemos realidad tu dulce imaginación...</h3>
+        </div>
         <p>Derechos Reservados @2022</p>
     </div>
 `
