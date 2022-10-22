@@ -20,9 +20,31 @@ p{
   padding: 0.3rem;
 }
 
+h1{
+  display: inline-block;
+  position: relative;
+}
+
 h2{
   margin-left: 2rem;
   font-size: 3.5rem;
+}
+
+h3{
+  font-family: Dulcelin;
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2rem;
+  text-shadow: 0.1rem 0.1rem 0.1rem #d079fc;
+  color: #530d77;
+}
+
+h4{
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2.5rem;
+  color: #530d77;;
 }
 
 /* 
@@ -107,11 +129,6 @@ a:hover{
   height: fit-content;
   margin: 1rem;
   padding: 1rem;
-}
-
-h1{
-  display: inline-block;
-  position: relative;
 }
 
 .tittle h1::before, .tittle h1::after{
@@ -211,16 +228,6 @@ h1{
   align-content: flex-start;
 }
 
-h3{
-  font-family: Dulcelin;
-  font-weight: bolder;
-  text-align: center;
-  margin-top: 2rem;
-  font-size: 2rem;
-  text-shadow: 0.1rem 0.1rem 0.1rem #d079fc;
-  color: #530d77;
-}
-
 .box p{
   text-shadow: 0.2rem 0.1rem 0.3rem #000;
   font-size: 1.2rem;
@@ -290,10 +297,12 @@ h3{
 -----------------------------------------------------------------------------------
 */
 
-.subtittle {
+/* .subtittle {
   color: #d079fc;
   text-align: center;
-}
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 2rem;
+} */
 
 .contactanos_mapa {
   /* display: grid; */
@@ -310,9 +319,10 @@ h3{
 
 p.mapa_texto {
   margin: 1rem;
-  font-size: 1rem;
+  font-size: 1.3rem;
   text-align: center;
-  color: #d079fc;
+  color: white;
+  text-shadow: 0.1rem 0.1rem 0.1rem rgb(61, 60, 60);
 }
 
 .formulario_container, form {
@@ -320,16 +330,16 @@ p.mapa_texto {
   grid-template-columns: 1fr 1fr;  /* Ajustar en los media queries!!*/
   column-gap: 1rem;
   row-gap: 0px;
-  padding: 1rem;
+  padding: 0.5rem;
   color: #d079fc;
 }
 
 .form_grupo {
-  padding: 1rem;
+  padding: 0.5rem;
   text-align: center;
   /* justify-content: center; */
   flex-direction: column;
-  width: 100%;
+  /* width: 100%; */
   /* color: #d079fc; */
 }
 
@@ -339,6 +349,7 @@ p.mapa_texto {
   /* font-weight: 700; negrita */
   /* cursor: pointer; */
   font-style: italic;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 1.75rem;
 }
 
@@ -380,6 +391,7 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
   width: 40%;
   padding: 0rem;
+  margin-bottom: 5rem;
   /* grid-column: 1 / -1;  */
   /* color: #530d77; */
 }
@@ -406,11 +418,16 @@ textarea {
 .contactanos_mapa>iframe {
   width: 90%;
   /* width: 35rem; */
-  height: 20rem;
-  border-radius: 0.3rem;
+  height: 18rem;
+  width: 28rem;
+  border-radius: 0.8rem;
   box-shadow: 0rem 0rem 3rem #d079fc;
 }
 
+a:visited{
+  text-decoration: none;
+  color: white;
+}
 /* Boton de Whatsapp */
 .boton_whatsapp {
   position: fixed;
@@ -419,14 +436,14 @@ textarea {
 }
 
 .boton_whatsapp>img {
-  width: 6rem;
+  width: 5rem;
 }
 
 .boton_whatsapp:hover {
   opacity: 0.7;
   }
 
-  /* 
+/* 
 -----------------------------------------------------------------------------------
                             ESTILOS DEL FOOTER                         
 -----------------------------------------------------------------------------------
@@ -478,7 +495,11 @@ margin-right: 6rem;
   text-decoration: none;
 }
 
-/* ANIMACIONES */
+/* 
+-----------------------------------------------------------------------------------
+                            ANIMACIONES                        
+-----------------------------------------------------------------------------------
+*/
 
 @keyframes deslizado_vertical {
     from {
@@ -498,8 +519,11 @@ margin-right: 6rem;
       }
   }
 
-
-/* FUENTES */
+/* 
+-----------------------------------------------------------------------------------
+                            FUENTES                         
+-----------------------------------------------------------------------------------
+*/
 
 @font-face {
   font-family:Dulcelin;
@@ -511,7 +535,11 @@ margin-right: 6rem;
   src: url(/fuentes/Audiowide.ttf);
 }
 
-/* MEDIA QUERIES */
+/* 
+-----------------------------------------------------------------------------------
+                            MEDIA QUERIES                        
+-----------------------------------------------------------------------------------
+*/
 
 @media screen and (max-width: 425px) {
     html{
