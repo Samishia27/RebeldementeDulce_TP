@@ -26,7 +26,7 @@ let footer =`
 
     <div>
         <div class="frase">
-            <h3>Hacemos realidad tu dulce imaginación...</h3>
+            <h4>Hacemos realidad tu dulce imaginación...</h4>
         </div>
         <p>Derechos Reservados @2022</p>
     </div>
