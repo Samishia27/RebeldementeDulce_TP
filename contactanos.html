@@ -14,162 +14,120 @@
     <header id="idheader">
     </header>
 
-    <!-- <main> -->
+    <main>
         <div class="tittle">
             <h1>Contactanos</h1>
         </div>
-        <div style="text-align: center;">
+        <div class="subtittle">
             <h2> Si querés saber algo más de nuestros pruductos y servicios, no dudes en escribirnos.</h2>
-            <h3>Para garantizar disponibilidad, te pedimos que nos avises con 48hs de anticipación.</h3><br><br>
+            <h3>Para garantizar disponibilidad, te pedimos que nos avises con 48hs de anticipación.</h3>
         </div>
         <div class="formulario_container">
             <!-- <form action="/pagina_destino.php"> Click the "Submit" button and the form-data will be sent to a page on the 
                 server called "action_page.php". -->
             <!-- https://www.w3schools.com/tags/tag_form.asp -->
-            <form action="" id="formulario" target="_blank">
-                <!-- <fieldset> -->
-                    <!-- <legend>Personalia:</legend> -->
-                    <div class="formulario__grupo" id="grupo__nombre">
-                        <label for="nombre" class="formulario__label">Nombre:</label>
-                        <input type="text" class="formulario__input formulario__input_neutro" id="nombre" name="nombre" placeholder="Inodoro Pereyra"><br><br>
-                        <!-- <i class="formulario__validacion-estado fas fa-times-circle"></i> -->
-                        <!-- <div class="formulario__grupo-input">
-                        </div> -->
-                    </div>
+            <!-- <form action="" id="formulario" target="_blank"> -->
+            <form action="" id="formulario">
+                <!-- <legend>Personalia:</legend> -->
+                <div class="form_grupo" id="grupo_nombre">
+                    <label for="nombre" class="form_title">Nombre:</label>
+                    <input type="text" class="form_input form_input_neutro" id="nombre" name="nombre" placeholder="Inodoro Pereyra"><br><br>
+                </div>
 
-                    <div class="formulario__grupo" id="grupo__celular">
-                        <label for="celular" class="formulario__label">Celular:</label>
-                        <input type="number" class="formulario__input" id="celular" name="celular" placeholder="11 12345678"><br><br>
-                        <!-- <div class="formulario__grupo-input">
-                        </div> -->
-                    </div>
-                    
-                    <div class="formulario__grupo" id="grupo__mail">
-                        <label for="mail" class="formulario__label">Mail:</label>
-                        <input type="text" class="formulario__input" id="mail" name="mail"><br><br>
-                        <!-- <div class="formulario__grupo-input">
-                        </div> -->
-                    </div>
-                    
-                    <div class="formulario__grupo" id="grupo__asunto">
-                        <label for="asunto" class="formulario__label">Qué estás buscando?:</label>
-                        <select class="formulario__input" name="asunto" id="asunto" onchange="mostrarOpcionesForm(), corregirFechasPermitidas()">
-                            <option disabled selected value> -- Elija una opción -- </option>
-                            <option value="regalo">Box de regalo</option>
-                            <option value="eventos">Eventos</option>
-                            <option value="productos">Productos individuales</option>
-                            <option value="comentarios">Comentarios</option>
-                        </select>
-                        <!-- <div class="formulario__grupo-input">
-                        </div> -->
-                    </div>
-                    
-                    
-                    
-                    <!-- box de regalo (motivo_cumpleaños_aniversario_diaespecial, fecha), eventos (fecha, personas, lugar, tematica), productos individuales -->
-                    <!-- Box de regalo. Opciones -->
-                    <!-- <div class="formulario__opciones__adicionales" id="opcionesRegalo" hidden> -->
-                    <div class="formulario__grupo opcionesRegalo" id="grupo__motivoRegalo" hidden>
-                        <label for="motivoRegalo" class="formulario__label">Algún motivo en especial?:</label>
-                        <input type="text" class="formulario__input" id="motivoRegalo" name="motivoRegalo"><br><br>
-                        <!-- <div class="formulario__grupo-input">
-                        </div> -->
-                    </div>
-                    <div class="formulario__grupo opcionesRegalo" id="grupo__fechaRegalo" hidden>
-                        <label for="fechaRegalo" class="formulario__label">Fecha de entrega:</label>
-                        <input type="date" class="formulario__input" id="fechaRegalo" name="fechaRegalo"><br><br>
-                        <!-- <div class="formulario__grupo-input">
-                        </div> -->
-                    </div>
-                    <div class="formulario__grupo opcionesRegalo" id="grupo__mensajeRegalo" hidden>
-                        <label for="mensajeRegalo" class="formulario__label">Mensaje:</label>
-                        <input type="text" class="formulario__input" id="mensajeRegalo" name="mensajeRegalo" placeholder="Podés dejarle un mensaje"><br><br>
-                        <!-- <div class="formulario__grupo-input">
-                        </div> -->
-                    </div>
-                    <!-- </div> -->
-                    <!-- Eventos. Opciones -->
-                    <!-- <div class="formulario__opciones__adicionales" id="opcionesEvento" hidden> -->
-                    <div class="formulario__grupo opcionesEvento" id="grupo__fechaEvento" hidden>
-                        <label for="fechaEvento" class="formulario__label">Fecha del evento:</label>
-                        <input type="date" class="formulario__input" id="fechaEvento" name="fechaEvento" min='2022-10-17'><br><br>
-                        <!-- <div class="formulario__grupo-input">
-                        </div> -->
-                    </div>
-                    <div class="formulario__grupo opcionesEvento" id="grupo__personasEvento" hidden>
-                        <label for="personasEvento" class="formulario__label">Cantidad de personas estimada:</label>
-                        <input type="number" class="formulario__input" id="personasEvento" name="personasEvento" min="1" pattern="^[0-9]+"><br><br> 
-            <!-- maximo 100? -->
-                        <!-- <div class="formulario__grupo-input">
-                        </div> -->
-                    </div>
-                    <div class="formulario__grupo opcionesEvento" id="grupo__datosEvento" hidden>
-                        <label for="datosEvento" class="formulario__label">Querés contarnos algo más:</label>
-                        <textarea id="datosEvento" name="datosEvento" rows="4" placeholder="Contanos algo sobre tu evento: la temática, alguna restricciones de los invitados, etc..."></textarea>
-                        <!-- <input type="text" class="formulario__input" id="datosEvento" name="datosEvento" placeholder="Contanos algo sobre tu evento: la temática, alguna restricciones de los invitados, etc..."><br><br> -->
-                        <!-- <div class="formulario__grupo-input">
-                        </div> -->
-                    </div>
-                    <!-- </div> -->
-                    <!-- Productos individuales. Opciones -->
-                    <!-- <div class="formulario__opciones__adicionales" id="opcionesProducto" hidden> -->
-                    <div class="formulario__grupo opcionesProducto" id="grupo__listaProducto" hidden>
-                        <label for="producto_individual" class="formulario__label">Qué producto te interesa?:</label>
-                        <select class="formulario__input" name="producto_individual" id="producto_individual">
-                            <option disabled selected value> -- Elija una opción -- </option>
-                            <option value="budin_banana">Budín de Banana</option>
-                            <option value="cheesecake">Cheesecake</option>
-                            <option value="pavlova">Pavlova</option>
-                            <option value="pie_limon">Pie de Limón</option>
-                            <option value="profiteroles">Profiteroles</option>
-                            <option value="red_velvet">Red Velvet</option>
-                            <option value="tarta_frutas">Tarta de Frutas</option>
-                            <option value="torta_ricota">Torta de Ricota</option>
-                            <option value="rosca_pascua">Rosca de Pascua</option>
-                            <option value="otro">Otro producto</option>
-                        </select>
-                    </div>
-                    <div class="formulario__grupo opcionesProducto" id="grupo__mensajeProducto" hidden>
-                        <label for="mensajeProducto" class="formulario__label">Querés contarnos algo más:</label>
-                        <!-- Se podría condicionar el texto a la opcion seleccionada!!!! -->
-                        <!-- <input type="text" class="formulario__input" id="mensajeProducto" name="mensajeProducto" placeholder="Ya pudiste disfrutar de nuestro producto"><br><br> -->
-                        <textarea id="mensajeProducto" name="mensajeProducto" rows="4" placeholder="Ya pudiste disfrutar de nuestro producto"></textarea>
-                        <div class="formulario__grupo-input">
-                        </div>
-                    </div>
-                    <!-- </div> -->
-                    <!-- Se puede agregar un desplegable de los productos de la otra solapa? -->
-                    <!-- Comentarios. Opciones -->
-                    <!-- <div class="formulario__opciones__adicionales" id="opcionesComentario" hidden> -->
-                    <div class="formulario__grupo opcionesComentario" id="grupo__textoComentario" hidden>
-                        <!-- <label for="textoComentario" class="formulario__label">Querés contarnos algo más:</label> -->
-                        <textarea id="textoComentario" name="textoComentario" rows="4" placeholder="Dejanos tu comentario"></textarea>
-                        <!-- <input type="text" class="formulario__input" id="textoComentario" name="textoComentario" value="Dejanos tu comentario"><br><br> -->
-                        <!-- <div class="formulario__grupo-input">
-                        </div> -->
-                    </div>
-                    <!-- </div> -->
+                <div class="form_grupo" id="grupo_celular">
+                    <label for="celular" class="form_title">Celular:</label>
+                    <input type="number" class="form_input form_input_neutro" id="celular" name="celular" placeholder="11 12345678"><br><br>
+                </div>
+                
+                <div class="form_grupo" id="grupo_mail">
+                    <label for="mail" class="form_title">Mail:</label>
+                    <input type="text" class="form_input form_input_neutro" id="mail" name="mail"><br><br>
+                </div>
+                
+                <div class="form_grupo" id="grupo_asunto">
+                    <label for="asunto" class="form_title">¿Qué estás buscando?:</label>
+                    <select class="form_input form_input_neutro" name="asunto" id="asunto" onchange="mostrarOpcionesForm(), corregirFechasPermitidas()">
+                        <option disabled selected value> -- Elija una opción -- </option>
+                        <option value="regalo">Box de regalo</option>
+                        <option value="eventos">Eventos</option>
+                        <option value="productos">Productos individuales</option>
+                        <option value="comentarios">Comentarios</option>
+                    </select>
+                </div>
+                
+                                    
+                <!-- box de regalo (motivo_cumpleaños_aniversario_diaespecial, fecha), eventos (fecha, personas, lugar, tematica), productos individuales -->
+                <!-- Box de regalo. Opciones -->
+                <div class="form_grupo opcionesRegalo" id="grupo_motivoRegalo">
+                    <label for="motivoRegalo" class="form_title">¿Algún motivo en especial?:</label>
+                    <input type="text" class="form_input form_input_neutro" id="motivoRegalo" name="motivoRegalo"><br><br>
+                </div>
+                <div class="form_grupo opcionesRegalo" id="grupo_fechaRegalo">
+                    <label for="fechaRegalo" class="form_title">Fecha de entrega:</label>
+                    <input type="date" class="form_input form_input_neutro" id="fechaRegalo" name="fechaRegalo"><br><br>
+                </div>
+                <div class="form_grupo opcionesRegalo" id="grupo_mensajeRegalo">
+                    <label for="mensajeRegalo" class="form_title">Mensaje:</label>
+                    <input type="text" class="form_input form_input_neutro" id="mensajeRegalo" name="mensajeRegalo" placeholder="Podés dejarle un mensaje"><br><br>
+                </div>
 
-                    <div class="formulario__grupo formulario__grupo-btn-enviar">
-                        <button type="submit" class="formulario-btn">Enviar</button>
-                        <!-- Gracias por completar el formulario! -->
+                <!-- Eventos. Opciones -->
+                <div class="form_grupo opcionesEvento" id="grupo_fechaEvento">
+                    <label for="fechaEvento" class="form_title">Fecha del evento:</label>
+                    <input type="date" class="form_input form_input_neutro" id="fechaEvento" name="fechaEvento"><br><br>
+                </div>
+                <div class="form_grupo opcionesEvento" id="grupo_personasEvento">
+                    <label for="personasEvento" class="form_title">Invitados estimados:</label>
+                    <input type="number" class="form_input form_input_neutro" id="personasEvento" name="personasEvento" min="1" pattern="^[0-9]+"><br><br> 
+        <!-- maximo 100? -->
+                </div>
+                <div class="form_grupo opcionesEvento" id="grupo_datosEvento">
+                    <label for="datosEvento" class="form_title">¿Querés contarnos algo más?:</label>
+                    <textarea id="datosEvento" name="datosEvento" rows="4" placeholder="Contanos algo sobre tu evento: el lugar del evento, la temática, alguna restricciones de los invitados, etc..."></textarea>
+                </div>
+
+                <!-- Productos individuales. Opciones -->
+                <div class="form_grupo opcionesProducto" id="grupo_listaProducto">
+                    <label for="producto_individual" class="form_title">¿Qué producto te interesa?:</label>
+                    <select class="form_input form_input_neutro" name="producto_individual" id="producto_individual">
+                        <option disabled selected value> -- Elija una opción -- </option>
+                        <option value="budin_banana">Budín de Banana</option>
+                        <option value="cheesecake">Cheesecake</option>
+                        <option value="pavlova">Pavlova</option>
+                        <option value="pie_limon">Pie de Limón</option>
+                        <option value="profiteroles">Profiteroles</option>
+                        <option value="red_velvet">Red Velvet</option>
+                        <option value="tarta_frutas">Tarta de Frutas</option>
+                        <option value="torta_ricota">Torta de Ricota</option>
+                        <option value="rosca_reyes">Rosca de Reyes</option>
+                        <option value="otro">Otro producto</option>
+                    </select>
+                </div>
+                <div class="form_grupo opcionesProducto" id="grupo_mensajeProducto">
+                    <label for="mensajeProducto" class="form_title">¿Querés contarnos algo más?:</label>
+                    <textarea id="mensajeProducto" name="mensajeProducto" rows="4" placeholder="¿Ya pudiste disfrutar de nuestro producto?"></textarea>
+                    <div class="form_grupo-input">
                     </div>
-                    <!-- <input type="submit" value="Enviar"> -->
-                <!-- </fieldset> -->
+                </div>
+
+                <!-- Comentarios. Opciones -->
+                <div class="form_grupo opcionesComentario" id="grupo_textoComentario">
+                    <textarea id="textoComentario" name="textoComentario" rows="4" placeholder="Dejanos tu comentario"></textarea>
+                </div>
+
+                <div class="form_grupo form_grupo_btn">
+                    <button type="submit" class="boton form_btn">Enviar</button>
+                    <!-- Gracias por completar el formulario! -->
+                </div>
             </form>
 
-            <!-- Formulario si es catering/eventos (fecha) o si es producto particular, regalo, dia de los enamorados, recetas -->
-            <!-- presupuesto/reserva directa. prespupesto sobre eventos o particulares -->
             <!-- Respuesta/mail autormatica con "gracias por contactarnos" -->
-<!-- mail y mapa?? -->
-<!-- bot de whatsapp  -->
 
-
-            <!-- <button id="contactanos-boton">Enviar</button> -->
             <div class="contactanos_mapa">
                 <h3>También podés visitarnos en nuestro local.</h3>
                 <!-- pequeño -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2784.900265958363!2d-58.42734141007202!3d-34.589080425394876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1665976116553!5m2!1ses-419!2sar" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2784.900265958363!2d-58.42734141007202!3d-34.589080425394876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1665976116553!5m2!1ses-419!2sar" style="border:10;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2784.900265958363!2d-58.42734141007202!3d-34.589080425394876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1665976116553!5m2!1ses-419!2sar" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
                 <!-- mediano -->
                 <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2784.900265958363!2d-58.42734141007202!3d-34.589080425394876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1665976116553!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
                 <!-- grande -->
@@ -183,7 +141,7 @@
 
         <div id="boton_whatsapp">
         </div>      
-</main>
+    </main>
 
     <footer id="idfooter">
     </footer>

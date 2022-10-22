@@ -55,126 +55,114 @@ function ocultarOpcionesForm() {
 const opciones = {regalo: 'opcionesRegalo', eventos: 'opcionesEvento', productos: 'opcionesProducto', comentarios: 'opcionesComentario'};
 function mostrarOpcionesForm() {
     let asuntoElegido = document.getElementById('asunto').value;
-    // console.log(asunto);
-    // console.log(opciones[asunto]);
 
     ocultarOpcionesForm();
     let opcionElegida = document.getElementsByClassName(opciones[asuntoElegido]);
     for (elemento of opcionElegida) {elemento.style.display = 'block'};
-    // opcionElegida.style.display = 'block';
 }
 
 
 const campos_check = {
     nombre: false,
     celular: false,
-    mail: false
+    mail: false,
+    opcionesAdicionales: false
 }
 
-const formulario = document.getElementById('formulario')
-const inputs = document.querySelectorAll('#formulario inputs')
+const formulario = document.getElementById('formulario');
+const inputs = document.querySelectorAll('#formulario inputs');
 const reg_exp = {
     nombre: /^[a-zA-ZÀ-ÿ\s]{1,50}$/,
     mail: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     celular: /^\d{8,12}$/, //de 8 a 12 números (por el código sin ceros)
-    texto: /^[a-zA-ZÀ-ÿ0-9_.+-\s]{1,500}$/,
+    texto: /^[a-zA-ZÀ-ÿ0-9_.+-\s]{1,500}$/
+    // cantidad: /^\d{1,3}$/
 }
 
 var today = new Date();
 var tomorrow = new Date();
 function corregirFechasPermitidas() {
-    tomorrow.setDate(today.getDate() + 2)
+    tomorrow.setDate(today.getDate() + 2);
     document.getElementById("fechaEvento").setAttribute("min", tomorrow.getFullYear()+'-'+(tomorrow.getMonth()+1)+'-'+tomorrow.getDate());
     document.getElementById("fechaRegalo").setAttribute("min", tomorrow.getFullYear()+'-'+(tomorrow.getMonth()+1)+'-'+tomorrow.getDate());
 }
 
-var validarFecha = function (e, event, field) {
-    // document.getElementById(field).classList.remove("formulario__input_neutro")
-    if (event.value >= event.min) {
-        console.log('se ejecuta True');
-        document.getElementById(field).classList.remove("formulario__input_incorrecto")
-        document.getElementById(field).classList.add("formulario__input_correcto")
-        // campos_check[field] = true;
-    } else {
-        console.log('se ejecuta False');
-        document.getElementById(field).classList.remove("formulario__input_correcto")
-        document.getElementById(field).classList.add("formulario__input_incorrecto")
-        // campos_check[field] = false;
-        e.preventDefault();
-    }
-}
-
-var validarOpcionesAdicionales = function (e) {
+var validarOpcionesAdicionales = function () {
+    campos_check["opcionesAdicionales"] = true;
     let asunto = document.getElementById('asunto').value;
     if (asunto == "regalo") {
-        validarField(e, reg_exp.texto, formulario.motivoRegalo, "motivoRegalo")
-        validarFecha(e, formulario.fechaRegalo, "fechaRegalo")
-        // validarField(e, reg_exp.texto, formulario.mensajeRegalo, "mensajeRegalo")
+        validarField(formulario.motivoRegalo, "motivoRegalo", "reg_exp");
+        validarField(formulario.fechaRegalo, "fechaRegalo", "fecha");
+        // validarField(e, formulario.mensajeRegalo, "mensajeRegalo", "texto");
     } else if (asunto == "eventos") {
-        validarFecha(e, formulario.fechaEvento, "fechaEvento")
-        validarField(e, reg_exp.texto, formulario.datosEvento, "datosEvento")
-// if (formulario.cantidad.value <= 0) { // Si el campo id="cantidad" del form está vacio...
-//     alert("La cantidad de personas debe ser positiva.")
-//     e.preventDefault()
-// }
-        // validarDatosEvento(e)
+        validarField(formulario.fechaEvento, "fechaEvento", "fecha");
+        validarField(formulario.personasEvento, "personasEvento", "cantidad");
+        validarField(formulario.datosEvento, "datosEvento", "reg_exp");
     } else if (asunto == "productos") {
-        validarField(e, reg_exp.texto, formulario.mensajeProducto, "mensajeProducto")
+        validarField(formulario.mensajeProducto, "mensajeProducto", "reg_exp");
+    } else if (asunto == "comentarios") {
+        validarField(formulario.mensajeComentario, "mensajeComentario", "reg_exp");
     }
 } 
 
-var validarNombre = function (e) {validarField(e, reg_exp.nombre, formulario.nombre, "nombre")}
-var validarCelular = function (e) {validarField(e, reg_exp.celular, formulario.celular, "celular")}
-var validarMail = function (e) {validarField(e, reg_exp.mail, formulario.mail, "mail")}
+var validarNombre = function () {validarField(formulario.nombre, "nombre", "reg_exp")};
+var validarCelular = function () {validarField(formulario.celular, "celular", "reg_exp")};
+var validarMail = function () {validarField(formulario.mail, "mail", "reg_exp")};
 
-function validarField (e, reg_exp, event, field) {
-    document.getElementById(field).classList.remove("formulario__input_neutro")
-    if (reg_exp.test(event.value)) { // Si el campo id="nombre" del form está vacio...
+function validarField (event, field, criterio) {
+    document.getElementById(field).classList.remove("form_input_neutro");
+    let validacion;
+    if (criterio == "reg_exp") {
+        let expresion = field in reg_exp ? reg_exp[field] : reg_exp["texto"];
+        validacion = expresion.test(event.value);
+    } else if (criterio == "fecha") {
+        validacion = event.value >= event.min;
+    } else if (criterio == "cantidad") {
+        validacion = (event.value > 0 && event.value <= 150);  // Hasta 150 personas para un evento (?)
+    }
+
+    if (validacion) {
         // minuto 18
         // alert("Completa el campo nombre")
         console.log('se ejecuta True');
-        document.getElementById(field).classList.remove("formulario__input_incorrecto")
-        document.getElementById(field).classList.add("formulario__input_correcto")
-        campos_check[field] = true;
+        document.getElementById(field).classList.remove("form_input_incorrecto");
+        document.getElementById(field).classList.add("form_input_correcto");
+        if (field in reg_exp) {
+            campos_check[field] = true;
+        } else {
+            campos_check["opcionesAdicionales"] *= true;
+        }
     } else {
         console.log('se ejecuta False');
-        document.getElementById(field).classList.remove("formulario__input_correcto")
-        document.getElementById(field).classList.add("formulario__input_incorrecto")
-        campos_check[field] = false;
-        e.preventDefault();
+        document.getElementById(field).classList.remove("form_input_correcto");
+        document.getElementById(field).classList.add("form_input_incorrecto");
+        if (field in reg_exp) {
+            campos_check[field] = false;
+        } else {
+            campos_check["opcionesAdicionales"] *= false;
+        }
+        // e.preventDefault();
     }
 }
 
 var validarTodo = function (e) {
-    // e.preventDefault();
-    validarNombre(e);
-    validarCelular(e)
-    validarMail(e)
-    validarOpcionesAdicionales(e)
-    // if (all fields are True) {alert('Gracias por completar el formulario!\nA la brevedad nos contactaremos con vos.')} else {alert('Por favor completá el formulario antes de enviar')}
+    e.preventDefault();
+    validarNombre();
+    validarCelular();
+    validarMail();
+    validarOpcionesAdicionales();
+    if (Object.values(campos_check).every(x => x)) {
+        formulario.reset();
+        alert('Gracias por completar el formulario!\nA la brevedad nos pondremos en contacto.')
+    } else {
+        alert('Por favor completá correctamente todas las celdas marcadas en rojo antes de enviar.')
+    }
 }
 
 formulario.addEventListener('submit', validarTodo);
+mostrarOpcionesForm()
+// corregirFechasPermitidas()
 
 $(document).on("keydown", ":input:not(textarea)", function(event) {
     return event.key != "Enter";
 });
-
-// formulario.addEventListener('submit', (e) => {
-//     e.preventDefault();
-// });
-
-// // // const validarFormulario = (e) => {
-// // //     switch (e.target.name)
-// // // }
-
-// function validarFormulario() {
-//     e.preventDefault();
-// // // // // // // en validar se ajusta!!!
-//     if (campos_check) {  // si todos los campos son true, sale del formulario correctamente, y lo resetea y borra todos los iconos
-//         formulario.reset();
-//         alert('Todo ok con el formulario')
-//     } else {
-//         alert('Por favor completá el formulario antes de enviar')
-//     }
-// }
