@@ -1,0 +1,23 @@
+SAM
+media-queries (índex y nosotros)
+
+
+LEO
+Productos
+las últimas 3 tarjetas están desalineadas --> ver flex-wrap
+quitar los links
+
+
+MATI
+pasar todo a rem
+media-queries formulario
+alerta de formulario
+php: mail
+redondear inputs
+mapa cuadrado con sombra
+
+inline con queries para nombre e inputs. q cambie para pantallas intermedias
+pantallas grandes:doble columna, nombre arriba
+pantalla intermedia: 1 columna, nombre al costado
+pantalla chica: 1 columna, nombre arriba
+
