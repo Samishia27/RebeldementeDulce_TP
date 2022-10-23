@@ -83,6 +83,7 @@ a:hover{
   text-shadow: 0.1rem 0.1rem 0.1rem grey;
   font-size: 2rem;
   font-weight: bold;
+  font-family: Dulcelin;
   margin: 0.5rem;
   padding: 0.5rem;
   border-radius: 3rem;
@@ -350,7 +351,7 @@ p.mapa_texto {
   /* cursor: pointer; */
   font-style: italic;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 1.75rem;
+  font-size: 1.4rem;
 }
 
 .form_input {
@@ -397,7 +398,7 @@ input::-webkit-inner-spin-button {
 }
 
 /* #grupo_mensajeProducto */
-#grupo_mensajeRegalo, #grupo_textoComentario, #grupo_datosEvento, .form_grupo_btn {
+#grupo_mensajeRegalo, #grupo_mensajeComentario, #grupo_datosEvento, .form_grupo_btn {
   grid-column: 1 / -1;
 }
 
