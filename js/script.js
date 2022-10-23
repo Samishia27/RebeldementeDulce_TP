@@ -14,7 +14,7 @@ let footer =`
         <div>
             <p class="pie-pagina">Seguinos en nuestras Redes Sociales</p>
         </div>
-        <div>
+        <div class="enlace">
             <a href="https://www.facebook.com/people/Rebeldemente-Dulce/100086828526739/" target="_blank" class="enlace">
                 <i class="fa-brands fa-square-facebook"></i>
             </a>
@@ -23,7 +23,11 @@ let footer =`
             </a>
         </div>
     </div>
+
     <div>
+        <div class="frase">
+            <h4>Hacemos realidad tu dulce imaginación...</h4>
+        </div>
         <p>Derechos Reservados @2022</p>
     </div>
 `
@@ -62,6 +66,7 @@ const campos_check = {
     nombre: false,
     celular: false,
     mail: false,
+    asunto: false,
     opcionesAdicionales: false
 }
 
@@ -89,12 +94,13 @@ var validarOpcionesAdicionales = function () {
     if (asunto == "regalo") {
         validarField(formulario.motivoRegalo, "motivoRegalo", "reg_exp");
         validarField(formulario.fechaRegalo, "fechaRegalo", "fecha");
-        // validarField(e, formulario.mensajeRegalo, "mensajeRegalo", "texto");
+        // validarField(e, formulario.mensajeRegalo, "mensajeRegalo", "texto");  // Se dejó opcional
     } else if (asunto == "eventos") {
         validarField(formulario.fechaEvento, "fechaEvento", "fecha");
         validarField(formulario.personasEvento, "personasEvento", "cantidad");
         validarField(formulario.datosEvento, "datosEvento", "reg_exp");
     } else if (asunto == "productos") {
+        validarField(formulario.producto_individual, "producto_individual", "desplegable");
         validarField(formulario.mensajeProducto, "mensajeProducto", "reg_exp");
     } else if (asunto == "comentarios") {
         validarField(formulario.mensajeComentario, "mensajeComentario", "reg_exp");
@@ -104,6 +110,7 @@ var validarOpcionesAdicionales = function () {
 var validarNombre = function () {validarField(formulario.nombre, "nombre", "reg_exp")};
 var validarCelular = function () {validarField(formulario.celular, "celular", "reg_exp")};
 var validarMail = function () {validarField(formulario.mail, "mail", "reg_exp")};
+var validarAsunto = function () {validarField(formulario.asunto, "asunto", "desplegable")};
 
 function validarField (event, field, criterio) {
     document.getElementById(field).classList.remove("form_input_neutro");
@@ -115,6 +122,8 @@ function validarField (event, field, criterio) {
         validacion = event.value >= event.min;
     } else if (criterio == "cantidad") {
         validacion = (event.value > 0 && event.value <= 150);  // Hasta 150 personas para un evento (?)
+    } else if (criterio == "desplegable") {
+        validacion = (event.value != '');  // Hasta 150 personas para un evento (?)
     }
 
     if (validacion) {
@@ -123,7 +132,7 @@ function validarField (event, field, criterio) {
         console.log('se ejecuta True');
         document.getElementById(field).classList.remove("form_input_incorrecto");
         document.getElementById(field).classList.add("form_input_correcto");
-        if (field in reg_exp) {
+        if (field in reg_exp || field == "asunto") {
             campos_check[field] = true;
         } else {
             campos_check["opcionesAdicionales"] *= true;
@@ -132,26 +141,49 @@ function validarField (event, field, criterio) {
         console.log('se ejecuta False');
         document.getElementById(field).classList.remove("form_input_correcto");
         document.getElementById(field).classList.add("form_input_incorrecto");
-        if (field in reg_exp) {
+        if (field in reg_exp || field == "asunto") {
             campos_check[field] = false;
         } else {
             campos_check["opcionesAdicionales"] *= false;
         }
-        // e.preventDefault();
     }
 }
+
+const formAlert = Swal.mixin({
+    // icon: 'warning',
+    width: '40%',
+    padding: '1rem',
+    background: '#d079fc', //color
+    backdrop: true, // diffuse del fondo
+    position: 'center',
+    allowOutsideClick: false,
+    allowEscapeKey: false,
+    allowEnterKey: true,
+    buttonsStyling: false,
+    confirmButtonText: 'OK',
+    customClass: {confirmButton: 'boton',},
+    // confirmButtonColor: ,
+    confirmButtonAriaLabel: "OK",
+});
 
 var validarTodo = function (e) {
     e.preventDefault();
     validarNombre();
     validarCelular();
     validarMail();
+    validarAsunto();
     validarOpcionesAdicionales();
     if (Object.values(campos_check).every(x => x)) {
         formulario.reset();
-        alert('Gracias por completar el formulario!\nA la brevedad nos pondremos en contacto.')
+        formAlert.fire({
+            html: '<h4>Gracias por completar el formulario!<br>A la brevedad nos pondremos en contacto.</h4>',
+            icon: 'success',
+        });
     } else {
-        alert('Por favor completá correctamente todas las celdas marcadas en rojo antes de enviar.')
+        formAlert.fire({
+            html: '<h4 style="color:black">Por favor completá correctamente todas las celdas marcadas en <span style="color:red">rojo</span> antes de enviar.</h4>',
+            icon: 'error',
+        });
     }
 }
 

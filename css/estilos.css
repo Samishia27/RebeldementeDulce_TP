@@ -11,16 +11,47 @@ html{
 }
 
 p{
-  text-align:justify;
+  text-align: justify;
   font-family: Georgia, 'Times New Roman', Times, serif;
   text-shadow: 0.1rem 0.1rem 0.1 rgb(61, 60, 60);
   color: white;
   font-size: 2rem;
-  margin: 0.3rem;
+  margin: 0.5rem;
   padding: 0.3rem;
 }
 
-/*DISEÑO HEADER*/
+h1{
+  display: inline-block;
+  position: relative;
+}
+
+h2{
+  margin-left: 2rem;
+  font-size: 3.5rem;
+}
+
+h3{
+  font-family: Dulcelin;
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2rem;
+  text-shadow: 0.1rem 0.1rem 0.1rem #d079fc;
+  color: #530d77;
+}
+
+h4{
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2.5rem;
+  color: #530d77;;
+}
+
+/* 
+-----------------------------------------------------------------------------------
+                            ESTILOS DEL HEADER                         
+-----------------------------------------------------------------------------------
+*/
 
 nav{
   height: auto;
@@ -46,11 +77,13 @@ a:hover{
 
 .boton{
   width: 25%;
+  min-width: 10rem;
   text-align: center;
   color: white;
   text-shadow: 0.1rem 0.1rem 0.1rem grey;
   font-size: 2rem;
   font-weight: bold;
+  font-family: Dulcelin;
   margin: 0.5rem;
   padding: 0.5rem;
   border-radius: 3rem;
@@ -62,22 +95,32 @@ a:hover{
   flex-grow: 1;
   /* cursor: pointer; */
 }
-  
-/*DISEÑO INDEX*/
+
+/* 
+-----------------------------------------------------------------------------------
+                            ESTILO DE LA PAGINA INICIO                        
+-----------------------------------------------------------------------------------
+*/
 
 .logo{
-  background-image: url("/img/Fondo-Escarcha.jpg");
+  background-image: url("/img/Fondo-Escarcha-3.jpg");
+  opacity: none;
   background-size: cover;
   display: flex;
   justify-content: center;
+  opacity: 95%;
 }
 
 .logo img{
-  width: 25rem;
-  height: 25rem;
+  width: 28rem;
+  height: 28rem;
 }
 
-/* DISEÑO DEL TITULO */
+/* 
+-----------------------------------------------------------------------------------
+                            ESTILOS DEL TITULO                        
+-----------------------------------------------------------------------------------
+*/
 
 .tittle{
   color:white;
@@ -87,11 +130,6 @@ a:hover{
   height: fit-content;
   margin: 1rem;
   padding: 1rem;
-}
-
-h1{
-  display: inline-block;
-  position: relative;
 }
 
 .tittle h1::before, .tittle h1::after{
@@ -111,37 +149,63 @@ h1{
   right: -8rem;
 }
 
+/* 
+-----------------------------------------------------------------------------------
+                            ESTILOS DE LA PAGINA NOSOTROS                         
+-----------------------------------------------------------------------------------
+*/
 
-/* DISEÑO NOSOTROS */
-
-.nosotros{
-  
+.presentacion{
   display: flex;
   flex-direction: row;
-  align-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 }
 
-.nosotros p{
-  text-indent: 3%;
-  margin: 2rem;
-  padding: 2rem 3rem;
-  border-radius: 5rem;
-  background-color: #d079fc73;
-  background-blend-mode: color;
+.logo_chico{
+  height: 12rem;
+  width: 12rem;
+  margin: 0.5rem 3rem 0rem;
+}
+
+.sobre_nosotros{
+  display: flex;
+  flex-direction: row;
+  background-color: #d079fcc7;
   box-shadow: 0rem 0rem 2rem #d079fc;
+  border-radius: 5rem;
+  margin: 2rem 3rem;
+  padding: 0.3rem 0.5rem;
+  text-shadow: 0.1rem 0.1rem 0.1rem rgb(61, 60, 60);
 }
 
-.nosotros img{
-  height: 23rem;
-  width: fit-content;
-  margin: 2rem;
-  padding: auto;
+.sobre_nosotros p{
+  text-indent: 3rem;
+  text-align: justify;
+  margin: 0rem 3rem;
+  text-shadow: 0.1rem 0.1rem 0.1rem #530d77;
+}
+
+.mision_vision p{
+  text-indent: 3rem;
+  text-align: justify;
+  margin: 1rem 4rem;
+  text-shadow: 0.1rem 0.1rem 0.1rem rgb(61, 60, 60);
+}
+
+.imagen{
+  height: 25rem;
+  width: 27rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
   border-radius: 3rem;
-  box-shadow: 0rem 0rem 25rem #d079fc;
+  /* box-shadow: 0rem 0rem 25rem #d079fc; */
 }
 
-/* DISEÑO PRODUCTOS */
+/* 
+-----------------------------------------------------------------------------------
+                            ESTILOS DE LA PAGINA PRODUCTOS                        
+-----------------------------------------------------------------------------------
+*/
 
 .container{
   padding: 1rem;
@@ -149,51 +213,37 @@ h1{
   flex-wrap: wrap;
   height: fit-content;
   justify-content: space-between;
-  /* align-items: center;
-  align-content: center; */
 }
 
 .box{
   height: 40rem;
-  margin: 1rem 4rem;
+  width: 23rem;
+  margin: 0rem 3rem 4rem;
   padding: 1.2rem;
-  box-shadow: 0rem 0rem 8rem #d079fc6e;
+  box-shadow: 0rem 0rem 2rem #d079fc;
   background-color: #d079fcc7;
   border-radius: 2rem;
-  border: 0.02rem rgb(61, 60, 60) dotted;
-}
-
-h3{
-  font-family: Dulcelin;
-  font-weight: bolder;
-  text-align: center;
-  margin-top: 2rem;
-  font-size: 2rem;
-  user-select: none;
-}
-
-.box .link{
-  text-decoration: none;
-  text-shadow: 0.1rem 0.2rem 0.1rem #d079fc;
-  color: #530d77;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
 }
 
 .box p{
   text-shadow: 0.2rem 0.1rem 0.3rem #000;
   font-size: 1.2rem;
-  width: 12rem;
-  margin: 0rem 1.5rem;
+  width: 15rem;
   text-align: center;
   user-select: none;
-  padding: 0.5rem;
 }
 
 .card{
   position: relative;
-  width: 15.625rem;
-  height: 15.625rem;
+  width: 18rem;
+  height: 18rem;
   display: flex;
-  margin-left: 0.35rem;
+  margin-left: 0.30rem;
+  margin-top: 1rem;
 }
 
 .card .face{
@@ -201,14 +251,15 @@ h3{
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  border-radius: 10px;
+  border-radius: 0.75rem;
   overflow: hidden;
   transition: .5s;
+  
 }
 
 .card .front{
   transform: perspective(600px) rotateY(0deg);
-  box-shadow: 0 0.5rem 1rem #000;
+  box-shadow: 0rem 0.5rem 1rem #000;
 }
 
 .card .front img{
@@ -216,6 +267,8 @@ h3{
   width: 100%;
   height: 100%;
   object-fit: cover;
+  padding: 0rem;
+  margin: 0rem;
 }
 
 .card .back img{
@@ -224,26 +277,19 @@ h3{
   height: 100%;
   object-fit: cover;
   opacity: 90%;
-  cursor: pointer;
 }
 
 .card .back{
   transform: perspective(600px) rotateY(180deg);
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between; */
   box-shadow: 0 5px 10px black;
-  cursor: pointer;
 }
 
 .card:hover .front{
   transform: perspective(600px) rotatey(180deg);
-  cursor: pointer;
 }
 
 .card:hover .back{
   transform: perspective(600px) rotatey(360deg);
-  cursor: pointer;
 }
 
 /* 
@@ -252,10 +298,12 @@ h3{
 -----------------------------------------------------------------------------------
 */
 
-.subtittle {
+/* .subtittle {
   color: #d079fc;
   text-align: center;
-}
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 2rem;
+} */
 
 .contactanos_mapa {
   /* display: grid; */
@@ -272,9 +320,10 @@ h3{
 
 p.mapa_texto {
   margin: 1rem;
-  font-size: 1rem;
+  font-size: 1.3rem;
   text-align: center;
-  color: #d079fc;
+  color: white;
+  text-shadow: 0.1rem 0.1rem 0.1rem rgb(61, 60, 60);
 }
 
 .formulario_container, form {
@@ -282,16 +331,16 @@ p.mapa_texto {
   grid-template-columns: 1fr 1fr;  /* Ajustar en los media queries!!*/
   column-gap: 1rem;
   row-gap: 0px;
-  padding: 1rem;
+  padding: 0.5rem;
   color: #d079fc;
 }
 
 .form_grupo {
-  padding: 1rem;
+  padding: 0.5rem;
   text-align: center;
   /* justify-content: center; */
   flex-direction: column;
-  width: 100%;
+  /* width: 100%; */
   /* color: #d079fc; */
 }
 
@@ -301,7 +350,8 @@ p.mapa_texto {
   /* font-weight: 700; negrita */
   /* cursor: pointer; */
   font-style: italic;
-  font-size: 1.75rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.4rem;
 }
 
 .form_input {
@@ -342,12 +392,13 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
   width: 40%;
   padding: 0rem;
+  margin-bottom: 5rem;
   /* grid-column: 1 / -1;  */
   /* color: #530d77; */
 }
 
 /* #grupo_mensajeProducto */
-#grupo_mensajeRegalo, #grupo_textoComentario, #grupo_datosEvento, .form_grupo_btn {
+#grupo_mensajeRegalo, #grupo_mensajeComentario, #grupo_datosEvento, .form_grupo_btn {
   grid-column: 1 / -1;
 }
 
@@ -368,11 +419,16 @@ textarea {
 .contactanos_mapa>iframe {
   width: 90%;
   /* width: 35rem; */
-  height: 20rem;
-  border-radius: 0.3rem;
+  height: 18rem;
+  width: 28rem;
+  border-radius: 0.8rem;
   box-shadow: 0rem 0rem 3rem #d079fc;
 }
 
+a:visited{
+  text-decoration: none;
+  color: white;
+}
 /* Boton de Whatsapp */
 .boton_whatsapp {
   position: fixed;
@@ -381,14 +437,18 @@ textarea {
 }
 
 .boton_whatsapp>img {
-  width: 6rem;
+  width: 5rem;
 }
 
 .boton_whatsapp:hover {
   opacity: 0.7;
   }
 
-/* DISEÑO FOOTER */
+/* 
+-----------------------------------------------------------------------------------
+                            ESTILOS DEL FOOTER                         
+-----------------------------------------------------------------------------------
+*/
 
 footer{
   font-family: Audiowide;
@@ -409,10 +469,18 @@ footer>div{
 
 footer>div>p{
 font-size: 1rem;
+margin-right: 6rem;
+}
+
+.frase{
+  font-weight: lighter;
+  font-size: 3rem;
+  font-family: Dulcelin;
+  margin-right: 8rem;
+  color: #40055e;
 }
 
 .pie-pagina{
-  text-align:center;
   text-shadow: 0.1rem 0.1rem 0.1rem rgb(61, 60, 60);
   color: white;
   font-size: 1.5rem;
@@ -420,14 +488,19 @@ font-size: 1rem;
 
 .enlace{
   color: #530d77;
+  text-align: center;
   text-shadow: 0.1rem 0.1rem 0.1rem #d079fc;
-  font-size: 3rem;
-  margin: 0.02rem;
-  padding: 0.5rem 1.5rem 0.5rem;
+  font-size: 2.5rem;
+  margin: 0.1rem;
+  padding: 0rem 1.5rem 0rem;
   text-decoration: none;
 }
 
-/* ANIMACIONES */
+/* 
+-----------------------------------------------------------------------------------
+                            ANIMACIONES                        
+-----------------------------------------------------------------------------------
+*/
 
 @keyframes deslizado_vertical {
     from {
@@ -447,19 +520,11 @@ font-size: 1rem;
       }
   }
 
-@keyframes deslizado_horizontal {
-    from {
-      margin-left: 100%;
-      width: 300%
-    }
-  
-    to {
-      margin-left: 0%;
-      width: 100%;
-    }
-  }
-
-/* FUENTES */
+/* 
+-----------------------------------------------------------------------------------
+                            FUENTES                         
+-----------------------------------------------------------------------------------
+*/
 
 @font-face {
   font-family:Dulcelin;
@@ -471,24 +536,63 @@ font-size: 1rem;
   src: url(/fuentes/Audiowide.ttf);
 }
 
-/* MEDIA QUERIES */
+/* 
+-----------------------------------------------------------------------------------
+                            MEDIA QUERIES                        
+-----------------------------------------------------------------------------------
+*/
 
-@media only screen and (max-width: 425px) {
-    /* html{
+@media screen and (max-width: 425px) {
+    html{
       font-size: 8px;
     }
-    footer{
+
+    .logo img{
+      width: 40rem;
+      height: 40rem;
+    }
+
+    .titulo{
+      display: flex;
       flex-direction: column;
       align-items: center;
-      align-content: center;
     }
+  
+    .parrafo{
+      display: flex;
+      flex-direction: row;
+    }
+
+    .presentacion{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     .container{
-      width: auto;
+      justify-content: center;
+    }
+
+    .sobre_nosotros{
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+    }
+
+    footer{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+      /* width: auto;
       flex-wrap: nowrap;
       height: fit-content;
       flex-direction: column;
       align-items: center;
     } */
+    
     .formulario_container, form {
       grid-template-columns: 1fr;
     }
@@ -519,19 +623,65 @@ font-size: 1rem;
   } */
 }
 
-@media only screen and (min-width: 992px) {
+@media screen and (min-width: 425px) and (max-width: 992px){
+ 
+  html{
+    font-size: 10px;
+  }
+
+  footer{
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+
+  .titulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .parrafo{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .container{
+    justify-content: center;
+  }
+  
+}
+
+@media screen and (min-width: 992px) and (max-width:1200px){
+  /* body{
+    background-color: yellow;
+  } */
+
   html{
     font-size: 12px;
   }
+
+  .container{
+    justify-content: center;
+  }
+
   .formulario_container, form {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
+  /* body{
+    background-color: green;
+  } */
   html{
     font-size: 16px;
   }
+
+  .container{
+    justify-content: center;
+  }
+  
   .formulario_container, form {
     grid-template-columns: 1fr 1fr;
   }
