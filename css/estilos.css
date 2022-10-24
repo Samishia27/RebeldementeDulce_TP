@@ -399,6 +399,11 @@ a:visited{
   text-decoration: none;
   color: white;
 }
+
+.alert_popup {
+  border: 0.45rem double #d079fc !important;
+}
+
 /* Boton de Whatsapp */
 .boton_whatsapp {
   position: fixed;

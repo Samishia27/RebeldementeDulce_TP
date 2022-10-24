@@ -51,7 +51,6 @@ function ocultarOpcionesForm() {
     }
 }
 
-// Falta borrar contenido si se cambia la opcion!!
 const opciones = {regalo: 'opcionesRegalo', eventos: 'opcionesEvento', productos: 'opcionesProducto', comentarios: 'opcionesComentario'};
 function mostrarOpcionesForm() {
     let asuntoElegido = document.getElementById('asunto').value;
@@ -127,9 +126,6 @@ function validarField (event, field, criterio) {
     }
 
     if (validacion) {
-        // minuto 18
-        // alert("Completa el campo nombre")
-        console.log('se ejecuta True');
         document.getElementById(field).classList.remove("form_input_incorrecto");
         document.getElementById(field).classList.add("form_input_correcto");
         if (field in reg_exp || field == "asunto") {
@@ -138,7 +134,6 @@ function validarField (event, field, criterio) {
             campos_check["opcionesAdicionales"] *= true;
         }
     } else {
-        console.log('se ejecuta False');
         document.getElementById(field).classList.remove("form_input_correcto");
         document.getElementById(field).classList.add("form_input_incorrecto");
         if (field in reg_exp || field == "asunto") {
@@ -153,7 +148,7 @@ const formAlert = Swal.mixin({
     // icon: 'warning',
     width: '40%',
     padding: '1rem',
-    background: '#d079fc', //color
+    background: 'black', //color
     backdrop: true, // diffuse del fondo
     position: 'center',
     allowOutsideClick: false,
@@ -161,10 +156,14 @@ const formAlert = Swal.mixin({
     allowEnterKey: true,
     buttonsStyling: false,
     confirmButtonText: 'OK',
-    customClass: {confirmButton: 'boton',},
-    // confirmButtonColor: ,
+    customClass: {
+        popup: 'alert_popup',
+        confirmButton: 'boton',
+    },
     confirmButtonAriaLabel: "OK",
 });
+
+var inputs_a_vaciar = document.getElementsByClassName('form_input');
 
 var validarTodo = function (e) {
     e.preventDefault();
@@ -176,12 +175,18 @@ var validarTodo = function (e) {
     if (Object.values(campos_check).every(x => x)) {
         formulario.reset();
         formAlert.fire({
-            html: '<h4>Gracias por completar el formulario!<br>A la brevedad nos pondremos en contacto.</h4>',
+            html: '<p style="text-align: center">Gracias por completar el formulario!<br>A la brevedad nos pondremos en contacto.</p>',
             icon: 'success',
         });
+        ocultarOpcionesForm();
+        for (elemento of inputs_a_vaciar) {
+            elemento.classList.remove("form_input_incorrecto");
+            elemento.classList.remove("form_input_correcto");
+            elemento.classList.add("form_input_neutro");
+        }
     } else {
         formAlert.fire({
-            html: '<h4 style="color:black">Por favor completá correctamente todas las celdas marcadas en <span style="color:red">rojo</span> antes de enviar.</h4>',
+            html: '<p style="text-align: center">Por favor completá correctamente todas las celdas marcadas en <span style="color:red">rojo</span> antes de enviar.</p>',
             icon: 'error',
         });
     }
@@ -189,8 +194,8 @@ var validarTodo = function (e) {
 
 formulario.addEventListener('submit', validarTodo);
 mostrarOpcionesForm()
-// corregirFechasPermitidas()
 
+// Para evitar ejecutar el form al presionar Enter
 $(document).on("keydown", ":input:not(textarea)", function(event) {
     return event.key != "Enter";
 });
