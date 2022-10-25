@@ -1,4 +1,3 @@
-
 let header  =`
     <nav>
         <a href="index.html" class="boton">Inicio</a>
@@ -120,9 +119,9 @@ function validarField (event, field, criterio) {
     } else if (criterio == "fecha") {
         validacion = event.value >= event.min;
     } else if (criterio == "cantidad") {
-        validacion = (event.value > 0 && event.value <= 150);  // Hasta 150 personas para un evento (?)
+        validacion = (event.value > 0 && event.value <= 150);  // Hasta 150 personas para un evento
     } else if (criterio == "desplegable") {
-        validacion = (event.value != '');  // Hasta 150 personas para un evento (?)
+        validacion = (event.value != ''); 
     }
 
     if (validacion) {
