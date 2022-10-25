@@ -588,7 +588,7 @@ margin-right: 6rem;
 
   .presentacion{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
 
   .formulario_container {
